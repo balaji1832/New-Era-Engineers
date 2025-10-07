@@ -1,0 +1,100 @@
+  .banner-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+    
+  }
+
+
+  /* About us styling */
+.stats-section {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 60px 20px;
+      width: 100%;
+    }
+
+    .stats-container {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(2, auto);
+      gap: 25px;
+      max-width: 700px;
+      width: 100%;
+    }
+
+    .stat-card {
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+      text-align: left;
+      transition: transform 0.3s ease;
+      min-height: 120px;
+    }
+
+    .stat-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .stat-card.orange {
+      background-color: #c85a0a;
+      color: #fff;
+    }
+
+    .stat-card.white {
+      background-color: #fff;
+      color: #000;
+    }
+
+    .stat-card h2 {
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+
+    .stat-card p {
+      font-size: 0.95rem;
+      margin: 0;
+      line-height: 1.4;
+    }
+
+    .stat-card.empty {
+      background-color: #c85a0a;
+    }
+
+    /* No layout change on smaller screens */
+    @media (max-width: 768px) {
+      .stats-container {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, auto);
+      }
+    }
+
+   /* Our Installation Success Stories */
+    .slide {
+      position: sticky;
+      top: 0;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      scroll-snap-align: start;
+      background-color: #f8f9fa;
+    }
+    .slide img {
+      max-width: 90%;
+      max-height: 90%;
+      object-fit: contain;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    }
+
+    /* Mobile responsiveness */
+    @media (max-width: 768px) {
+      .slide img {
+        max-width: 95%;
+        height: 250px;
+      }
+    }

@@ -1,4 +1,12 @@
-  .banner-img {
+ 
+h1,h2,h3,h4,h5,h6{
+  font-family: 'Raleway';
+}
+p{
+  font-family: 'Lato';
+}
+ 
+ .banner-img {
     width: 100%;
     height: auto;
     display: block;
@@ -39,7 +47,7 @@
     }
 
     .stat-card.orange {
-      background-color: #c85a0a;
+      background-color: #CA661B;
       color: #fff;
     }
 
@@ -61,7 +69,7 @@
     }
 
     .stat-card.empty {
-      background-color: #c85a0a;
+      background-color: #CA661B;
     }
 
     /* No layout change on smaller screens */

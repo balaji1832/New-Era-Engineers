@@ -1,18 +1,15 @@
-// <!-- Our Installation Success Stories--Timeline Script -->
+  const indicator = document.querySelector('.timeline-indicator');
+    const container = document.querySelector('.timeline-container');
+    const timeline = document.querySelector('.timeline');
 
-// Scroll indicator logic (desktop only)
-const indicator = document.querySelector('.timeline-indicator');
-const timeline = document.querySelector('.timeline');
+    container.addEventListener('scroll', () => {
+      const scrollTop = container.scrollTop;
+      const containerHeight = container.clientHeight;
+      const timelineHeight = timeline.scrollHeight;
 
-window.addEventListener('scroll', () => {
-  if(window.innerWidth > 992){ // Only for desktop
-    const timelineTop = timeline.offsetTop;
-    const timelineHeight = timeline.scrollHeight;
-    const scrollTop = window.scrollY;
-    const windowHeight = window.innerHeight;
+      // Progress relative to container scroll
+      let progress = scrollTop / (timelineHeight - containerHeight);
+      progress = Math.max(0, Math.min(1, progress));
 
-    let progress = ((scrollTop + windowHeight/2) - timelineTop) / timelineHeight;
-    progress = Math.max(0, Math.min(1, progress));
-    indicator.style.height = `${progress * 100}%`;
-  }
-});
+      indicator.style.height = `${progress * 100}%`;
+    });

@@ -279,13 +279,33 @@ p{
     }
 
 /* Timeline container */
-.timeline {
+   .timeline-container {
   position: relative;
-  width: 90%;
-  margin: 100px auto;
+  width: 100% !important;
+  /* max-width: 1000px; */
+  height: 600px; /* Fixed height */
+  margin: 50px auto;
+  overflow-y: auto; /* Scroll inside container */
+  padding: 20px;
+  background: #fff;
+  /* border: 1px solid #333; */
+
+  /* Hide scrollbar across browsers */
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;     /* Firefox */
+}
+.timeline-container::-webkit-scrollbar {
+  width: 0px;
+  background: transparent;  /* Chrome, Safari, Opera */
 }
 
-/* Center line for desktop only */
+/* Timeline */
+.timeline {
+  position: relative;
+  width: 100%;
+}
+
+/* Center line */
 .timeline::before {
   content: '';
   position: absolute;
@@ -299,7 +319,7 @@ p{
   z-index: 1;
 }
 
-/* Scroll indicator line */
+/* Scroll indicator */
 .timeline-indicator {
   position: absolute;
   top: 0;
@@ -317,33 +337,12 @@ p{
 .timeline-section {
   position: relative;
   width: 50%;
-  padding: 50px 60px;
+  padding: 30px 20px;
   box-sizing: border-box;
-  margin-bottom: 120px;
+  margin-bottom: 60px;
 }
 
-/* Image styling */
-.timeline-section img {
-  width: 100%;
-  max-width: 300px;
-  border-radius: 8px;
-  box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.08);
-}
-
-/* Number and label */
-.timeline-section .number {
-  font-size: 35px;
-  font-weight: 700;
-  color: #CA661B;
-  margin-bottom: 8px;
-}
-.timeline-section .label {
-  font-size: 15px;
-  font-weight: 600;
-  color: #333;
-}
-
-/* Left sections */
+/* Left section */
 .timeline-section.left {
   left: 0;
   text-align: right;
@@ -351,14 +350,14 @@ p{
 .timeline-section.left::before {
   content: '';
   position: absolute;
-  top: 70px;
+  top: 40px;
   right: -12px;
   width: 20px;
   height: 2px;
   background: #CA661B;
 }
 
-/* Right sections */
+/* Right section */
 .timeline-section.right {
   left: 50%;
   text-align: left;
@@ -366,12 +365,29 @@ p{
 .timeline-section.right::before {
   content: '';
   position: absolute;
-  top: 70px;
+  top: 40px;
   left: -8px;
   width: 20px;
   height: 2px;
   background: #CA661B;
 }
+
+/* Images */
+.timeline-section img {
+  width: 100%;
+  max-width: 250px;
+  border-radius: 8px;
+  box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.08);
+}
+
+/* Number */
+.timeline-section .number {
+  font-size: 25px;
+  font-weight: 700;
+  color: #CA661B;
+  margin-bottom: 8px;
+}
+
 
 /* ===== Tablet/Mobile carousel ===== */
 @media (max-width: 992px) {

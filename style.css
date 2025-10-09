@@ -9,6 +9,19 @@
       background-color: #fff;
     }
 
+/* Scroll Progress Bar Styling */
+#scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 5px;
+  background: linear-gradient(90deg, #f5791a, #b814bd);
+  z-index: 9999;
+  transition: width 0.2s ease-out;
+}
+
+
     /* Header Container */
     header{
       font-family: "Raleway";
@@ -160,6 +173,29 @@
         margin-left: 10px;
       }
     } 
+
+    .scroll-top {
+    position: fixed;
+    right: 20px;
+    bottom: 40px;
+    background: #df0808; 
+    color: #fff;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    font-size: 24px;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    transition: opacity 0.3s;
+    opacity: 0.7;
+    z-index: 1000;
+  }
+
+  .scroll-top:hover {
+    opacity: 1;
+  }
 h1,h2,h3,h4,h5,h6{
   font-family: 'Raleway';
   font-weight: 600;
@@ -403,59 +439,86 @@ p{
 }
 /* Serving Diverse Industrial Needs */
 
-/* Mobile/Tablet carousel */
-.carousel-container { position: relative; }
-.carousel-track { display: flex; transition: transform 0.5s ease; }
-.carousel-track .card { flex: 0 0 auto; width: 100%; }
-@media (min-width: 768px) { .carousel-track .card { width: calc(100% / 3); } }
-
-/* Carousel buttons */
-#prevBtn, #nextBtn {
-  z-index: 10;
-  background: rgba(0,0,0,0.5);
-  color: #fff;
-  border: none;
-  width: 40px;
-  height: 40px;
-  font-size: 24px;
-  cursor: pointer;
+/* Carousel container */
+.carousel-container { 
+  position: relative; 
+  overflow: hidden; 
 }
 
-.carousel-container { position: relative; overflow: hidden; }
-.carousel-track { display: flex; transition: transform 0.5s ease; }
-.carousel-track .card { flex: 0 0 auto; width: 100%; margin-right: 1rem; }
+/* Track */
+.carousel-track { 
+  display: flex; 
+  transition: transform 0.5s ease; 
+  gap: 1rem;
+}
+
+/* Card width */
+.carousel-track .card { 
+  flex: 0 0 100%; 
+}
 
 /* Tablet: 3 cards visible */
 @media (min-width: 768px) and (max-width: 1199px) {
-  .carousel-track .card { width: calc((100% - 2rem) / 3); }
+  .carousel-track .card { 
+    flex: 0 0 calc((100% - 2rem) / 3); 
+  }
 }
 
-/* Desktop: hide carousel */
+/* Desktop: 5 cards visible */
 @media (min-width: 1200px) {
-  .carousel-container { display: none; }
+  .carousel-track .card { 
+    flex: 0 0 calc((100% - 4rem) / 5); 
+  }
 }
 
-/* Unique prev/next buttons */
+/* Carousel buttons */
 .carousel-prev-btn, .carousel-next-btn {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
   z-index: 10;
-  background: rgba(0,0,0,0.2) !important;
+  background: rgba(0, 0, 0, 0.5) !important;
   color: #fff !important;
   border: none;
   width: 40px;
   height: 40px;
-  font-size: 24px ;
+  font-size: 27px;
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 50%;
+  border-radius: 50% !important;
 }
+
 .carousel-prev-btn { left: 0.5rem; }
 .carousel-next-btn { right: 0.5rem; }
-.carousel-prev-btn:hover, .carousel-next-btn:hover { background: rgba(0,0,0,0.8); }
+
+.carousel-prev-btn:hover, .carousel-next-btn:hover { 
+  background: rgba(0,0,0,0.8); 
+}
+
+.serving-button{
+  bottom: 10px;
+  position: absolute;
+}
+
+.Serving-card{
+  transition: transform 0.3s, box-shadow 0.15s;
+}
+
+@media (min-width:1440px){
+  .Serving-card:hover{
+  transform: translateY(-10px);
+  box-shadow: -10px 10px 10px rgba(34, 34, 34,0.3);
+}
+.carousel-prev-btn, .carousel-next-btn{
+  display: none !important;
+}
+}
+
+
+
+
 
 /* signature Expertise */
 .Expertise:hover{
@@ -467,6 +530,8 @@ p{
   transition: transform 0.3s, box-shadow 0.3s;
   border-radius: 50%;
 }
+
+
 
 
 /* ---------- Building Success Togethern ---------- */

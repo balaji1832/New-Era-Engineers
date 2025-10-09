@@ -18,6 +18,12 @@
 
 </style>
 <body>
+  <!-- Scroll Progress Bar -->
+<div id="scroll-progress"></div>
+<!-- HTML: Sticky Scroll-to-Top Icon -->
+<div class="scroll-top" id="scrollTopBtn">
+  &#8679; <!-- Up arrow icon -->
+</div>
   <!-- Header -->
   <header class="ne-header sticky-top">
     <div class="container d-flex align-items-center justify-content-between">
@@ -225,113 +231,59 @@
   <div class="container py-5">
     <h1 class="mb-4 text-start">Serving Diverse Industrial<br> Needs</h1>
 
-    <!-- Mobile & Tablet Carousel -->
-    <div class="carousel-container d-block d-lg-none position-relative">
+    <!-- Carousel for all screens -->
+    <div class="carousel-container position-relative">
       <div class="carousel-track d-flex">
         <!-- Cards -->
-        <div class="card">
+        <div class="card Serving-card">
           <img src="Images/AUTOMOBILE.png" class="img-fluid" alt="AUTOMOBILE">
           <div class="card-body">
             <h5 class="card-title fw-semibold">AUTOMOBILE</h5>
-            <p class="card-text">Applications related to coolants, fuel, liquified, gasses, oils, paint, solvents.</p>
+            <p class="card-text pb-5">Applications related to coolants, fuel, liquified, gasses, oils, paint, solvents.</p>
             <a href="#" class="btn serving-button">Know More</a>
           </div>
         </div>
-        <div class="card">
+        <div class="card Serving-card">
           <img src="Images/CHEMICAL & PHARMA.png" class="img-fluid" alt="CHEMICAL & PHARMA">
           <div class="card-body">
             <h5 class="card-title fw-semibold">CHEMICAL & PHARMA</h5>
-            <p class="card-text">Applications related to abrasives, acids, creams, gels, paste, resins, solvents and syrups.</p>
+            <p class="card-text pb-5">Applications related to abrasives, acids, creams, gels, paste, resins, solvents and syrups.</p>
             <a href="#" class="btn serving-button">Know More</a>
           </div>
         </div>
-        <div class="card">
+        <div class="card Serving-card Serving-card">
           <img src="Images/ELECTROPLATING.png" class="img-fluid" alt="ELECTROPLATING">
           <div class="card-body">
             <h5 class="card-title fw-semibold">ELECTROPLATING</h5>
-            <p class="card-text">Applications related to acids, condensation, insulating resins, PH control, galvanic tanks.</p>
+            <p class="card-text pb-5">Applications related to acids, condensation, insulating resins, PH control, galvanic tanks.</p>
             <a href="#" class="btn serving-button">Know More</a>
           </div>
         </div>
-        <div class="card">
+        <div class="card Serving-card">
           <img src="Images/FOOD AND BEVERAGE.png" class="img-fluid" alt="FOOD & BEVERAGE">
           <div class="card-body">
             <h5 class="card-title fw-semibold">FOOD AND BEVERAGE</h5>
-            <p class="card-text">Applications related to alcohol, aromas, chocolate, cream, milk, pasta, syrup.</p>
+            <p class="card-text pb-5">Applications related to alcohol, aromas, chocolate, cream, milk, pasta, syrup.</p>
             <a href="#" class="btn serving-button">Know More</a>
           </div>
         </div>
-        <div class="card">
+        <div class="card Serving-card">
           <img src="Images/WASTE WATER.png" class="img-fluid" alt="WASTE WATER">
           <div class="card-body">
             <h5 class="card-title fw-semibold">WASTE WATER</h5>
-            <p class="card-text">Applications related to clarifier sludge, dosing chemicals, filter press, PH filtration.</p>
+            <p class="card-text pb-5">Applications related to clarifier sludge, dosing chemicals, filter press, PH filtration.</p>
             <a href="#" class="btn serving-button">Know More</a>
           </div>
         </div>
       </div>
 
-      <!-- Unique Carousel Controls -->
-      <button class="carousel-prev-btn btn  position-absolute top-50 start-0 translate-middle-y">‹</button>
-      <button class="carousel-next-btn btn  position-absolute top-50 end-0 translate-middle-y">›</button>
+      <!-- Carousel Controls -->
+      <button class="carousel-prev-btn btn">‹</button>
+      <button class="carousel-next-btn btn">›</button>
     </div>
-
-    <!-- Large screen: 5 cards row -->
-    <div class="row d-none d-lg-flex g-3 d-flex justify-content-center">
-      <div class="col-lg-2">
-        <div class="card h-100">
-          <img src="Images/AUTOMOBILE.png" class="img-fluid" alt="AUTOMOBILE">
-          <div class="card-body">
-            <h5 class="card-title fw-semibold ">AUTOMOBILE</h5>
-            <p class="card-text">Applications related to coolants, fuel, liquified, gasses, oils, paint, solvents.</p>
-            <a href="#" class="btn serving-button">Know More</a>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-2">
-        <div class="card h-100">
-          <img src="Images/CHEMICAL & PHARMA.png" class="img-fluid" alt="CHEMICAL & PHARMA">
-          <div class="card-body">
-            <h5 class="card-title fw-semibold">CHEMICAL & PHARMA</h5>
-            <p class="card-text">Applications related to abrasives, acids, creams, gels, paste, resins, solvents and syrups.</p>
-            <a href="#" class="btn serving-button">Know More</a>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-2">
-        <div class="card h-100">
-          <img src="Images/ELECTROPLATING.png" class="img-fluid" alt="ELECTROPLATING">
-          <div class="card-body">
-            <h5 class="card-title fw-semibold">ELECTROPLATING</h5>
-            <p class="card-text">Applications related to acids, condensation, insulating resins, PH control, galvanic tanks.</p>
-            <a href="#" class="btn serving-button">Know More</a>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-2">
-        <div class="card h-100">
-          <img src="Images/FOOD AND BEVERAGE.png" class="img-fluid" alt="FOOD & BEVERAGE">
-          <div class="card-body">
-            <h5 class="card-title fw-semibold">FOOD AND BEVERAGE</h5>
-            <p class="card-text">Applications related to alcohol, aromas, chocolate, cream, milk, pasta, syrup.</p>
-            <a href="#" class="btn serving-button">Know More</a>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-2">
-        <div class="card h-100">
-          <img src="Images/WASTE WATER.png" class="img-fluid" alt="WASTE WATER">
-          <div class="card-body">
-            <h5 class="card-title fw-semibold">WASTE WATER</h5>
-            <p class="card-text">Applications related to clarifier sludge, dosing chemicals, filter press, PH filtration.</p>
-            <a href="#" class="btn serving-button">Know More</a>
-          </div>
-        </div>
-      </div>
-    </div>
-
   </div>
 </section>
+
 
  <!-- Signature Expertise -->
 
@@ -483,13 +435,37 @@
     </div>
 </div>
 </footer>
-
+<script src="js/Progressbar.js"></script> 
 <script src="js/Header.js"></script> 
 <script src="js/Timeline.js"></script> 
 <script src="js/Industrial-needs.js"></script>
 <script src="js/sign-up.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 
+<!--UP-ARROW JavaScript -->
+<script>
+  const scrollBtn = document.getElementById('scrollTopBtn');
+
+  // Show button after scrolling down 100px
+  window.onscroll = function() {
+    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+      scrollBtn.style.display = "block";
+    } else {
+      scrollBtn.style.display = "none";
+    }
+  };
+
+  // Scroll to top when clicked
+  scrollBtn.addEventListener('click', () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  });
+
+  // Hide initially
+  scrollBtn.style.display = "none";
+</script>
 
 </body>
 </html>

@@ -5,6 +5,11 @@
       box-sizing: border-box;
     }
 
+    /* html, body {
+  height: 100%;
+} */
+
+
     body {
       background-color: #fff;
     }
@@ -27,7 +32,14 @@
       font-family: "Raleway";
     }
     .ne-header {
-      background-color: #fff;
+       /* Frosted glass with gradient */
+  background: linear-gradient(to bottom,rgb(252, 251, 248) , rgba(255,255,255,0.6));
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+
+  /* Border for glass effect */
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
       box-shadow: 0 2px 5px rgba(0,0,0,0.05);
       padding: 8px 0;
       position: relative;
@@ -284,7 +296,7 @@ p{
   width: 100% !important;
   /* max-width: 1000px; */
   height: 600px; /* Fixed height */
-  margin: 50px auto;
+  /* margin: 50px auto; */
   overflow-y: auto; /* Scroll inside container */
   padding: 20px;
   background: #fff;
@@ -375,7 +387,7 @@ p{
 /* Images */
 .timeline-section img {
   width: 100%;
-  max-width: 250px;
+  max-width: 65%;
   border-radius: 8px;
   box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.08);
 }
@@ -783,3 +795,17 @@ footer{
   border-top: 2px solid #fff;
   padding-top: 20px ;
 }
+
+
+.animate-item {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 1s ease;
+}
+
+/* When visible */
+.animate-item.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+

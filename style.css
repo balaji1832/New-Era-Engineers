@@ -544,7 +544,15 @@ p{
 }
 }
 
-
+@media (min-width:1025px) {
+  .carousel-prev-btn, .carousel-next-btn{
+  display: none !important;
+}
+.Serving-card:hover{
+  transform: translateY(-10px);
+  box-shadow: -10px 10px 10px rgba(34, 34, 34,0.3);
+}
+}
 
 
 

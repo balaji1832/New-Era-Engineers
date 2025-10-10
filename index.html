@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>New Era Engineers</title>
-    <link rel="icon" href="Images/logo.png">
+    <link rel="icon" href="Images/Group.svg">
     <link rel="stylesheet" href="style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -80,11 +80,20 @@
 
 
     <!-- Banner Section -->
-    <section class="banner-section animate-item">
-     <div class="container p-0">
-         <img src="Images/Banner.png" alt="Banner Image" class="img-fluid banner-img w-100">
-     </div>
-  </section>
+    <!-- Desktop Banner -->
+<section class="banner-section animate-item d-none d-md-block">
+  <div class="container-fluid p-0">
+    <img src="Images/web-banner-new-era.jpg" alt="Banner Image" class="img-fluid banner-img w-100">
+  </div>
+</section>
+
+<!-- Mobile Banner -->
+<section class="banner-section animate-item d-block d-md-none">
+  <div class="container p-0">
+    <img src="Images/web-banner-mobile.jpg" alt="Banner Image" class="img-fluid banner-img w-100">
+  </div>
+</section>
+
 
   <section class="animate-item">
     <div class="container mt-5">
@@ -407,23 +416,24 @@
   <div class="container">
     <div class="row">
       <div class="col-8 col-md-3 col-lg-3">
-        <img style="box-shadow: 0px 5px 10px rgba(23, 23, 23,0.3);" src="Images/logo.png" alt="Logo" class="img-fluid w-50" srcset="">
+        <img style="box-shadow: 0px 5px 10px rgba(23, 23, 23,0.3);" src="Images/f-logo.png" alt="Logo" class="img-fluid w-50" srcset="">
       </div>
-      <div class="col-12 col-md-5 col-lg-3 ">
+      <div class="col-6 col-md-5 col-lg-3 ">
         <p>SiteMap</p>
         <ul class="sitemap-ul">
-          <li>Home</li>
+          <li>About</li>
           <li>Contact Us</li>
-          <li>Service Request</li>
           <li>Bank Details</li>
-          <li>Enquiry</li>
-          <li>Detailed Enquiry</li>
+          
         </ul>
       </div>
-      <div class="col-12 col-md-4 col-lg-3">
+      <div class="col-6 col-md-4 col-lg-3">
         <p>Our Service</p>
-        <ul>
-          <li>Privacy Policy</li>
+        <ul class="sitemap-ul">
+          <li>Service Request</li>
+          <li>Enquiry</li>
+          <li>Detailed Enquiry</li>
+
         </ul>
       </div>
       <div class="col-12 col-md-6 col-lg-3">
@@ -460,6 +470,7 @@
         <img src="Images/LinkedIn.png" class="img-fluid" alt="LinkedIn">
         <img src="Images/Whatsapp.png" class="img-fluid" alt="Whatsapp">
       </div>
+      <p>Terms & Conditions | Privacy Policy</p>
     </div>
 </div>
 </footer>

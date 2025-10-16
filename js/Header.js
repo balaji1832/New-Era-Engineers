@@ -1,18 +1,38 @@
-//  JS for Toggle 
-const neToggleBtn = document.querySelector('.ne-toggle');
-    const neMobileNav = document.getElementById('neMobileNav');
-    const neSearchIcon = document.querySelector('.ne-search-icon i');
-    const neSearchBox = document.getElementById('neSearchBox');
+    document.addEventListener("DOMContentLoaded", function () {
+      /* Hover mega menu with 3s delayed close (desktop only) */
+      if (window.innerWidth > 992) {
+        document.querySelectorAll(".navbar .nav-item.dropdown").forEach(function (dropdown) {
+          let timer;
+          const toggle = dropdown.querySelector('[data-bs-toggle="dropdown"]');
+          const instance = bootstrap.Dropdown.getOrCreateInstance(toggle);
 
-    // Mobile menu toggle
-    neToggleBtn.addEventListener('click', () => {
-      neMobileNav.style.display = (neMobileNav.style.display === 'block') ? 'none' : 'block';
-      neSearchBox.style.display = 'none'; // hide search when menu opens
-    });
+          dropdown.addEventListener("mouseenter", function () {
+            clearTimeout(timer);
+            instance.show();
+          });
+          dropdown.addEventListener("mouseleave", function () {
+            timer = setTimeout(() => instance.hide(), 2000);
+          });
+          dropdown.addEventListener("mouseenter", function () { clearTimeout(timer); });
+        });
+      }
 
-    // Search box toggle
-    neSearchIcon.addEventListener('click', () => {
-      neSearchBox.style.display = (neSearchBox.style.display === 'block') ? 'none' : 'block';
-      neMobileNav.style.display = 'none'; // hide nav when search opens
+      /* Search toggle (mobile + desktop share same box) */
+      const box   = document.getElementById("neSearchBox");
+      const input = document.getElementById("neSearchInput");
+      const btnMobile  = document.getElementById("neSearchToggleMobile");
+      const btnDesktop = document.getElementById("neSearchToggle");
+
+      function toggleSearch() {
+        const open = box.classList.contains("open");
+        box.classList.toggle("open");
+        if (!open) setTimeout(() => input && input.focus(), 200);
+      }
+      btnMobile?.addEventListener("click", toggleSearch);
+      btnDesktop?.addEventListener("click", toggleSearch);
+
+      document.addEventListener("keydown", function (e) {
+        if (e.key === "Escape" && box.classList.contains("open")) box.classList.remove("open");
+      });
     });
- 
+  

@@ -41,152 +41,124 @@
   border: 1px solid rgba(255, 255, 255, 0.3);
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
       box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-      padding: 8px 0;
       position: relative;
       z-index: 100;
     }
 
-    /* Logo */
-    .ne-logo img {
-      height: 45px;
+     /* ===== HEADER STYLING ===== */
+    /* .navbar {  box-shadow:0 1px 5px rgba(0,0,0,.08); padding:.75rem 1rem; } */
+    .navbar-brand img { height:48px; }
+    .navbar-nav .nav-link { color:#000; font-weight:600; font-size:12px; padding:.75rem 1rem; text-transform:uppercase; }
+    .navbar-nav .nav-link:hover, .navbar-nav .nav-link:focus, .dropdown-menu a:hover { color:#d24a22; }
+
+    /* ===== MEGA MENU ===== */
+    .dropdown-menu.mega-menu{
+      width:100%; border-top:2px solid #d24a22; border-radius:0; margin-top:0;
+      background:#fff; box-shadow:0 8px 32px rgba(0,0,0,.1); padding:0;
+    }
+    .mega-menu .row>div{ padding:1rem 1.5rem; border-right:1px solid rgba(0,0,0,.1); }
+    .mega-menu .row>div:last-child{ border-right:none; }
+    .mega-menu h6{
+      font-size:16px; font-weight:700; color:#000; text-transform:uppercase; margin-bottom:.5rem;
+      border-bottom:2px solid #d24a22; display:inline-block; padding-bottom:4px;
+    }
+    .mega-menu a{ display:block; color:#444; font-size:14px; line-height:2; text-decoration:none; padding:6px 0; }
+    .mega-menu a:hover{ color:#d24a22; }
+
+    /* ===== SEARCH BOX (slide-down) ===== */
+    .search-box{ position:sticky; top:0; z-index:1030;  border-bottom:1px solid rgba(0,0,0,.08);
+      overflow:hidden; max-height:0; transition:max-height .35s ease; }
+    .search-box.open{ max-height:120px; }
+    .search-box .inner{ padding:1rem 0; }
+    .search-input{
+      width:100%; max-width:700px; padding:.85rem 1rem; border:1px solid rgba(0,0,0,.15);
+      border-radius:.5rem; outline:none; font-size:16px;
+    }
+    .search-input:focus{ border-color:#d24a22; box-shadow:0 0 0 .2rem rgba(210,74,34,.15); }
+
+    /* Small/tablet: dropdown is static, keep borders neat */
+    @media (max-width: 992px){
+      .dropdown-menu.mega-menu{ position:static; box-shadow:none; }
+      .mega-menu .row>div{ border-right:none; border-bottom:1px solid rgba(0,0,0,.08); }
+      .mega-menu .row>div:last-child{ border-bottom:none; }
     }
 
-    /* Desktop Navigation */
-    .ne-nav ul {
-      list-style: none;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin-bottom: 0;
+    /* Tighter icon feel like screenshot */
+    .icon-btn{ color:#000; padding:.25rem; line-height:1; }
+    .icon-btn:focus{ outline:none; box-shadow:none; }
+    .icon-size{ font-size:1.4rem;color: #000; } 
+    .icon-gap{ margin-left:.5rem; } 
+
+    .icon-size:hover{
+      color: #CB6725;
     }
 
-    .ne-nav ul li {
-      margin: 0 10px;
-    }
 
-    .ne-link {
-      color: #000;
-      font-size: 14px;
-      font-weight: 500;
-      text-decoration: none;
-      padding-bottom: 2px;
-      position: relative;
-      transition: all 0.3s ease;
-    }
+    /* Active state: subtle thin underline */
+.navbar-nav .nav-link.ne-active,
+.ne-link.ne-active {
+  color: #CB6725 !important;
+  position: relative;
+}
 
-    .ne-link:hover,
-    .ne-link.ne-active {
-      color: #CA661B;
-    }
+.navbar-nav .nav-link.ne-active::after,
+.ne-link.ne-active::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0.35rem;
+  height: 2px;                 /* keep 1px for render stability */
+  background: rgba(203,103,37,0.7);  /* same color, lower opacity makes it look thinner */
+  border-radius: 1px;
+}
 
-    .ne-link.ne-active::after {
-      content: "";
-      position: absolute;
-      bottom: -3px;
-      left: 0;
-      width: 100%;
-      height: 2px;
-      background-color: #CA661B;
-    }
+/* Optional hover color */
+.navbar-nav .nav-link:hover,
+.ne-link:hover {
+  color: #CB6725;
+}
 
-    /* Search Icon */
-    .ne-search-icon i {
-      font-size: 18px;
-      color: #CA661B;
-      cursor: pointer;
-      transition: color 0.3s ease;
-    }
+.navbar-nav .nav-link i {
+  transition: transform 0.3s ease;
+}
 
-    .ne-search-icon i:hover {
-      color: #a34e15;
-    }
+.navbar-nav .nav-link.show i {
+  transform: rotate(180deg); /* rotates the chevron when dropdown is open */
+}
 
-    /* Hamburger Toggle */
-    .ne-toggle {
-      display: none;
-      background: none;
-      border: none;
-      font-size: 24px;
-      color: #CA661B;
-    }
-
-    /* Mobile Navigation */
-    .ne-mobile-nav {
-      display: none;
-      background-color: #fff;
-      border-top: 1px solid #eee;
-    }
-
-    .ne-mobile-nav ul {
-      list-style: none;
-      padding: 10px 0;
-      margin: 0;
-    }
-
-    .ne-mobile-nav li {
-      text-align: start;
-      padding: 8px 10px;
-      background: linear-gradient(90deg, #f6f1ed, #CA661B);
-    }
-
-    .ne-mobile-nav a {
-      color: #000;
-      text-decoration: none;
-      font-weight: 500;
-      transition: color 0.3s ease;
-    }
-
-    .ne-mobile-nav a:hover {
-      color: #CA661B;
-    }
-
-    /* Search Box */
-    .ne-search-box {
-      display: none;
-      /* background-color: rgb(255, 255, 255,0.2); */
-      /* border-top: 1px solid #eee; */
-      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-      padding: 10px;
-      animation: ne-fadeIn 0.3s ease;
-    }
-
-    .ne-search-box input {
-      width: 100%;
-      max-width: 400px;
-      border: 1px solid #ccc;
-      border-radius: 25px;
-      padding: 8px 15px;
-      font-size: 14px;
-      outline: none;
-      transition: all 0.3s ease;
-    }
-
-    .ne-search-box input:focus {
-      border-color: #CA661B;
-      box-shadow: 0 0 5px rgba(202,102,27,0.3);
-    }
-
-    @keyframes ne-fadeIn {
-      from {opacity: 0; transform: translateY(-5px);}
-      to {opacity: 1; transform: translateY(0);}
-    }
-
-    /* Responsive */
-    @media (max-width: 992px) {
-      .ne-nav {
-        display: none;
-      }
-
-      .ne-toggle {
-        display: block;
-      }
-
-      .ne-search-icon {
-        margin-left: 10px;
-      }
-    } 
-
+.navbar .dropdown-toggle::after {
+  display: none !important; /* hides Bootstrap's default caret */
+}
     
+@media (max-width: 991.98px) {
+  .dropdown-menu.mega-menu{
+    position: static;      /* sit inside the collapsed nav */
+    width: 100%;
+    left: 0;
+    right: 0;
+    transform: none;
+    border-top: 1px solid rgba(0,0,0,.08);
+    box-shadow: none;
+    padding: .25rem 0;     /* tighter panel */
+  }
+
+  /* stack items, remove right borders, add bottom dividers */
+  .mega-menu .row > div{
+    padding: .75rem 1rem;
+    border-right: none;
+    border-bottom: 1px solid rgba(0,0,0,.08);
+  }
+  .mega-menu .row > div:last-child{ border-bottom: none; }
+
+  /* bigger touch targets */
+  .mega-menu .dropdown-item{
+    font-size: 15px;
+    line-height: 1.4;
+    padding: .5rem 0;
+    white-space: normal;
+  }
+}
 
     .scroll-top {
     position: fixed;

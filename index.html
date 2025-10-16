@@ -1,535 +1,920 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>New Era Engineers</title>
-    <link rel="icon" href="Images/Group.svg">
-    <link rel="stylesheet" href="style.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet"> 
-    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
-
-</head>
-<body>
-  <!-- Scroll Progress Bar -->
-<div id="scroll-progress"></div>
-<!-- HTML: Sticky Scroll-to-Top Icon -->
-<div class="scroll-top" id="scrollTopBtn">
-  &#8679; <!-- Up arrow icon -->
-</div>
-  <!-- Header -->
-  <header class="ne-header sticky-top animate-item">
-    <div class="container d-flex align-items-center justify-content-between">
-      
-      <!-- Logo -->
-      <div class="ne-logo">
-        <img src="Images/logo.png" alt="New Era Logo">
-      </div>
-
-      <!-- Navigation (Desktop) -->
-      <nav class="ne-nav d-none d-lg-block">
-        <ul>
-          <li><a href="index.html" class="ne-link ne-active">Home</a></li>
-          <li><a href="Aboutus.html" class="ne-link">About Us</a></li>
-          <li><a href="products.html" class="ne-link">Products</a></li>
-          <li><a href="#" class="ne-link">Industries</a></li>
-          <li><a href="#" class="ne-link">Enquiry</a></li>
-          <li><a href="#" class="ne-link">Service</a></li>
-          <li><a href="#" class="ne-link">Contact Us</a></li>
-          <li><a href="#" class="ne-link">Bank &amp; Statutory</a></li>
-        </ul>
-      </nav>
-
-      <!-- Right Section -->
-      <div class="d-flex align-items-center">
-        <button class="ne-toggle d-lg-none"><i class="bi bi-list"></i></button>
-        <div class="ne-search-icon"><i class="bi bi-search"></i></div>
-      </div>
+    <link rel="icon" href="Images/Group.svg" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Scroll Progress Bar -->
+    <div id="scroll-progress"></div>
+    <!-- HTML: Sticky Scroll-to-Top Icon -->
+    <div class="scroll-top" id="scrollTopBtn">
+      &#8679;
+      <!-- Up arrow icon -->
     </div>
+    <!-- Header -->
+    <!-- Header -->
+    <header class="ne-header sticky-top ">
+      <div class="container">
+        <!-- ===== HEADER ===== -->
+        <nav class="navbar navbar-expand-lg navbar-light sticky-top">
+          <div class="container-fluid">
+            <!-- Left: Brand -->
+            <a class="navbar-brand" href="#">
+              <img src="Images/logo.png" alt="New Era Engineers Logo" />
+            </a>
 
-    <!-- Mobile Menu -->
-    <div class="ne-mobile-nav" id="neMobileNav">
-      <ul>
-        <li><a href="index.html" class="ne-link ne-active">Home</a></li>
-        <li><a href="Aboutus.html" class="ne-link">About Us</a></li>
-        <li><a href="products.html" class="ne-link">Products</a></li>
-        <li><a href="#" class="ne-link">Industries</a></li>
-        <li><a href="#" class="ne-link">Enquiry</a></li>
-        <li><a href="#" class="ne-link">Service</a></li>
-        <li><a href="#" class="ne-link">Contact Us</a></li>
-        <li><a href="#" class="ne-link">Bank &amp; Statutory</a></li>
-      </ul>
-      
-    </div>
+            <!-- Right (SM/TAB): [hamburger][search] like your screenshot -->
+            <div class="d-flex align-items-center ms-auto d-lg-none">
+              <!-- Hamburger toggles collapse -->
+              <button
+                class="navbar-toggler icon-btn"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarNavDropdown"
+                aria-controls="navbarNavDropdown"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+              >
+                <!-- Use icon instead of default toggler bars -->
+                <i class="bi bi-list icon-size"></i>
+              </button>
+              <!-- Search icon immediately AFTER hamburger -->
+              <button
+                id="neSearchToggleMobile"
+                class="btn btn-link icon-btn icon-gap"
+                type="button"
+                aria-expanded="false"
+                aria-controls="neSearchBox"
+              >
+                <i class="bi bi-search icon-size"></i>
+              </button>
+            </div>
 
-    <!-- Search Box -->
-    <div class="ne-search-box" id="neSearchBox">
-      <div class="container text-center">
-        <input type="text" placeholder="Search here...">
+            <!-- Collapsible nav -->
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+              <ul class="navbar-nav ms-auto align-items-lg-center">
+                <li class="nav-item">
+                  <a class="nav-link ne-active" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="Aboutus.html">About Us</a>
+                </li>
+
+                <!-- PRODUCTS DROPDOWN -->
+                <li class="nav-item dropdown position-static">
+                  <a
+                    class="nav-link dropdown-toggle d-flex align-items-center gap-1"
+                    href="#"
+                    id="productsDropdown"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    Products
+                    <i
+                      class="bi bi-chevron-down small"
+                      style="font-size: 0.75rem"
+                    ></i>
+                  </a>
+
+                  <div
+                    class="dropdown-menu mega-menu"
+                    aria-labelledby="productsDropdown"
+                  >
+                    <div class="row">
+                      <div class="col-lg-2 col-md-4">
+                        <h6>100% Leakproof Sealless Pumps</h6>
+                        <a href="products.html">Air Operated Diaphragm Pumps</a>
+                        <a href="#"
+                          >Chemical Thermoplastic Pumps - Vertical Glandless</a
+                        >
+                        <a href="#">Drum/Barrel/Carboy Pumps</a>
+                        <a href="#">Thermoplastic Magnetic Drive Pumps</a>
+                        <a href="#">Metallic Magnetic Drive Pumps</a>
+                      </div>
+
+                      <div class="col-lg-2 col-md-4">
+                        <h6>Centrifugal Pumps</h6>
+                        <a href="#">Chemical Metallic Process Pumps</a>
+                        <a href="#">Chemical Thermoplastic Horizontal Pumps</a>
+                        <a href="#">FDA - Centrifugal Sanitary Pumps</a>
+                        <a href="#">Horizontal and Vertical Multistage Pumps</a>
+                        <a href="#">Non-Clog Horizontal Self Priming Pumps</a>
+                        <a href="#">Non-Clog Vertical Submersible Pumps</a>
+                      </div>
+
+                      <div class="col-lg-2 col-md-4">
+                        <h6>Positive Displacement Pumps</h6>
+                        <a href="#">AODD Sanitary Pumps</a>
+                        <a href="#">Dosing & Metering Pumps</a>
+                        <a href="#">External Gear Pumps</a>
+                        <a href="#">Hose / Peristaltic Pumps</a>
+                        <a href="#">Internal Gear Pumps</a>
+                        <a href="#">Rotary Lobe Pumps</a>
+                        <a href="#">Screw Pumps</a>
+                      </div>
+
+                      <div class="col-lg-2 col-md-4">
+                        <h6>Motors</h6>
+                        <a href="#">Crane and Hoist Duty Motors</a>
+                        <a href="#">DC Motors</a>
+                        <a href="#">Explosion-Proof / Flameproof Motors</a>
+                        <a href="#">Helical Geared Motors</a>
+                        <a href="#">Squirrel Cage Motors</a>
+                      </div>
+
+                      <div class="col-lg-2 col-md-4">
+                        <h6>Gear Boxes</h6>
+                        <a href="#">Helical Gear Boxes</a>
+                        <a href="#">Worm Gear Boxes</a>
+                      </div>
+
+                      <div class="col-lg-2 col-md-4">
+                        <h6>Level Controllers</h6>
+                        <a href="#">Water Switch Controls</a>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+
+                <!-- INDUSTRIES DROPDOWN -->
+                <li class="nav-item dropdown position-static">
+                  <a
+                    class="nav-link dropdown-toggle d-flex align-items-center gap-1"
+                    href="#"
+                    id="industriesDropdown"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    Industries
+                    <i
+                      class="bi bi-chevron-down small"
+                      style="font-size: 0.75rem"
+                    ></i>
+                  </a>
+
+                  <div
+                    class="dropdown-menu mega-menu"
+                    aria-labelledby="industriesDropdown"
+                  >
+                    <div class="row g-0">
+                      <div class="col-lg-2 col-md-4">
+                        <a href="#" class="dropdown-item fw-semibold"
+                          >Automobile Industry</a
+                        >
+                      </div>
+                      <div class="col-lg-3 col-md-4">
+                        <a href="#" class="dropdown-item fw-semibold">
+                          Chemical and Pharmaceutical Industry
+                        </a>
+                      </div>
+                      <div class="col-lg-2 col-md-4">
+                        <a href="#" class="dropdown-item fw-semibold"
+                          >Electroplating Industry</a
+                        >
+                      </div>
+                      <div class="col-lg-2 col-md-4">
+                        <a href="#" class="dropdown-item fw-semibold"
+                          >Food and Beverage Industry</a
+                        >
+                      </div>
+                      <div class="col-lg-3 col-md-4">
+                        <a href="#" class="dropdown-item fw-semibold"
+                          >Wastewater Treatment Industry</a
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </li>
+
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Enquiry</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Service</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Contact Us</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Bank & Statutory</a>
+                </li>
+
+                <!-- Desktop search icon at far right -->
+                <li class="nav-item ms-lg-2 d-none d-lg-block">
+                  <button
+                    id="neSearchToggle"
+                    class="btn btn-link nav-link p-0 icon-btn"
+                    type="button"
+                    aria-expanded="false"
+                    aria-controls="neSearchBox"
+                  >
+                    <i class="bi bi-search" style="font-size: 1.1rem"></i>
+                  </button>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+
+        <!-- Slide-down Search -->
+        <div class="search-box" id="neSearchBox">
+          <div class="inner text-center">
+            <input
+              id="neSearchInput"
+              class="search-input"
+              type="text"
+              placeholder="Search products, pumps, motors..."
+            />
+          </div>
+        </div>
       </div>
-    </div>
-
-  </header>
-
+    </header>
 
     <!-- Banner Section -->
     <!-- Desktop Banner -->
-<section class="banner-section animate-item d-none d-md-block">
-  <div class="container-fluid p-0">
-    <img src="Images/web-banner-new-era.jpg" alt="Banner Image" class="img-fluid banner-img w-100">
-  </div>
-</section>
+    <section class="banner-section animate-item d-none d-md-block">
+      <div class="container-fluid p-0">
+        <img
+          src="Images/web-banner-new-era.jpg"
+          alt="Banner Image"
+          class="img-fluid banner-img w-100"
+        />
+      </div>
+    </section>
 
-<!-- Mobile Banner -->
-<section class="banner-section animate-item d-block d-md-none">
-  <div class="container p-0">
-    <img src="Images/web-banner-mobile.jpg" alt="Banner Image" class="img-fluid banner-img w-100">
-  </div>
-</section>
+    <!-- Mobile Banner -->
+    <section class="banner-section animate-item d-block d-md-none">
+      <div class="container p-0">
+        <img
+          src="Images/web-banner-mobile.jpg"
+          alt="Banner Image"
+          class="img-fluid banner-img w-100"
+        />
+      </div>
+    </section>
 
-
-  <section class="animate-item">
-    <div class="container mt-5">
+    <section class="animate-item">
+      <div class="container mt-5">
         <h1>About us</h1>
         <div class="row">
-            <div class="col-12 col-lg-6">
-               <P>Delivering Quality Engineering Solutions Since Our Inception</P>
-               <section class="stats-section">
-    <div class="stats-container">
-      
-      <div class="stat-card orange">
-        <h2>65 Years</h2>
-        <p>of experience in the industry</p>
+          <div class="col-12 col-lg-6">
+            <p>Delivering Quality Engineering Solutions Since Our Inception</p>
+            <section class="stats-section">
+              <div class="stats-container">
+                <div class="stat-card orange">
+                  <h2>65 Years</h2>
+                  <p>of experience in the industry</p>
+                </div>
+
+                <div class="stat-card white">
+                  <h2>4000 +</h2>
+                  <p>number of happy clients</p>
+                </div>
+
+                <div class="stat-card white">
+                  <h2>29</h2>
+                  <p>industries our clients are based out of</p>
+                </div>
+
+                <div class="stat-card orange empty"></div>
+              </div>
+            </section>
+          </div>
+          <div class="col-12 col-lg-6">
+            <p>
+              Founded in 1956 by Mr.S.M.Desai, New Era Group has grown to be a
+              leading Pump Dealers in Chennai,India today. An expert in pumping
+              technology, the company is one of the top few pump distributors in
+              India that distributes reputable and leading brands and has
+              reacted to high demand for trendsetting pumps and systems with a
+              carefully crafted growth strategy.
+            </p>
+            <img src="Images/About-img.png" class="img-fluid" alt="" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Our Installation Success Stories -->
+    <section class="animate-item">
+      <div class="container d-flex">
+        <div class="row">
+          <div class="col-12 col-lg-5">
+            <h1>Our Installation Success Stories</h1>
+          </div>
+          <div class="col-12 col-lg-7">
+            <p>
+              Explore our successful on-site installations that showcase
+              precision, reliability, and engineering excellence across diverse
+              industries
+            </p>
+          </div>
+        </div>
       </div>
 
-      <div class="stat-card white">
-        <h2>4000 +</h2>
-        <p>number of happy clients</p>
-      </div>
+      <!-- Desktop Timeline -->
+      <div class="container timeline-container d-none d-lg-block">
+        <div class="timeline">
+          <div class="timeline-indicator"></div>
 
-      <div class="stat-card white">
-        <h2>29</h2>
-        <p>industries our clients are based out of</p>
-      </div>
-
-      <div class="stat-card orange empty"></div>
-
-    </div>
-  </section>  
+          <div class="timeline-section right">
+            <div class="number">
+              01<span
+                style="
+                  font-size: 15px;
+                  color: rgb(32, 32, 32);
+                  padding-left: 10px;
+                "
+                >Self-priming</span
+              >
             </div>
-            <div class="col-12 col-lg-6"> 
-                <p>Founded in 1956 by Mr.S.M.Desai, New Era Group has grown to be a leading Pump Dealers in Chennai,India today. An expert in pumping technology, the company is one of the top few pump distributors in India that distributes reputable and leading brands and has reacted to high demand for trendsetting pumps and systems with a carefully crafted growth strategy.</p>
-                <img src="Images/About-img.png" class="img-fluid" alt="">
+            <img src="Images/T-1.png" alt="Self-priming" />
+          </div>
+
+          <div class="timeline-section left">
+            <div class="number">
+              02<span
+                style="
+                  font-size: 15px;
+                  color: rgb(32, 32, 32);
+                  padding-left: 10px;
+                "
+                >Drum Transfer</span
+              >
             </div>
-        </div>
-       </div>
-  </section>
-
-  <!-- Our Installation Success Stories -->
-<section class="animate-item">
-  <div class="container d-flex">
-    <div class="row">
-      <div class="col-12 col-lg-5">
-        <h1>Our Installation Success Stories</h1>
-      </div>
-      <div class="col-12 col-lg-7">
-        <p>Explore our successful on-site installations that showcase precision, reliability, and engineering excellence across diverse industries</p>
-
-      </div>
-    </div>
-    
-  </div>
-
-
-
-<!-- Desktop Timeline -->
-  <div class="container timeline-container d-none d-lg-block">
-    <div class="timeline">
-      <div class="timeline-indicator"></div>
-
-      <div class="timeline-section right">
-        <div class="number">01<span style="font-size: 15px;color: rgb(32,32,32); padding-left: 10px;">Self-priming</span></div>
-        <img src="Images/T-1.png" alt="Self-priming">
-      </div>
-
-      <div class="timeline-section left">
-        <div class="number">02<span style="font-size: 15px;color: rgb(32,32,32); padding-left: 10px;">Drum Transfer</span></div>
-        <img src="Images/T-2.png" alt="Drum Transfer">
-      </div>
-
-      <div class="timeline-section right">
-        <div class="number">03<span style="font-size: 15px;color: rgb(32,32,32); padding-left: 10px;">Positive Suction Head</span></div>
-        <img src="Images/T-3.png" alt="Positive Suction Head">
-      </div>
-
-      <div class="timeline-section left">
-        <div class="number">04<span style="font-size: 15px;color: rgb(32,32,32); padding-left: 10px;">Immersed</span></div>
-        <img src="Images/T-4.png" alt="Immersed">
-      </div>
-
-      <div class="timeline-section right">
-        <div class="number">05<span style="font-size: 15px;color: rgb(32,32,32); padding-left: 10px;">Twin Suction and Delivery Manifold</span></div>
-        <img src="Images/T-5.png" alt="Twin Suction and Delivery Manifold">
-      </div>
-
-      <div class="timeline-section left">
-        <div class="number">06<span style="font-size: 15px;color: rgb(32,32,32); padding-left: 10px;">Twin Suction Manifold</span></div>
-        <img src="Images/T-6.png" alt="Twin Suction Manifold">
-      </div>
-    </div>
-  </div>
-
-
-
-<!-- Mobile/Tablet Carousel -->
-<div id="timelineCarousel" class="carousel slide timeline-carousel d-flex d-lg-none" data-bs-ride="carousel">
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      <img src="Images/T-1.png" class="d-block w-100" alt="Self-priming">
-      <div class="carousel-caption">
-        <h5>01. Self-priming</h5>
-      </div>
-    </div>
-    <div class="carousel-item">
-      <img src="Images/T-2.png" class="d-block w-100" alt="Drum Transfer">
-      <div class="carousel-caption">
-        <h5>02. Drum Transfer</h5>
-      </div>
-    </div>
-    <div class="carousel-item">
-      <img src="Images/T-3.png" class="d-block w-100" alt="Positive Suction Head">
-      <div class="carousel-caption">
-        <h5>03. Positive Suction Head</h5>
-      </div>
-    </div>
-    <div class="carousel-item">
-      <img src="Images/T-4.png" class="d-block w-100" alt="Immersed">
-      <div class="carousel-caption">
-        <h5>04. Immersed</h5>
-      </div>
-    </div>
-    <div class="carousel-item">
-      <img src="Images/T-5.png" class="d-block w-100" alt="Twin Suction and Delivery Manifold">
-      <div class="carousel-caption">
-        <h5>05. Twin Suction and Delivery Manifold</h5>
-      </div>
-    </div>
-    <div class="carousel-item">
-      <img src="Images/T-6.png" class="d-block w-100" alt="Twin Suction Manifold">
-      <div class="carousel-caption">
-        <h5>06. Twin Suction Manifold</h5>
-      </div>
-    </div>
-  </div>
-  <button class="carousel-control-prev" type="button" data-bs-target="#timelineCarousel" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon"></span>
-  </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#timelineCarousel" data-bs-slide="next">
-    <span class="carousel-control-next-icon"></span>
-  </button>
-</div>
-</section>
-
-
-<!-- Serving Diverse Industrial Needs -->
-
-<section class="animate-item">
-  <div class="container py-5">
-    <h1 class="mb-4 text-start">Serving Diverse Industrial<br> Needs</h1>
-
-    <!-- Carousel for all screens -->
-    <div class="carousel-container position-relative">
-      <div class="carousel-track d-flex">
-        <!-- Cards -->
-        <div class="card Serving-card">
-          <img src="Images/AUTOMOBILE.png" class="img-fluid" alt="AUTOMOBILE">
-          <div class="card-body">
-            <h5 class="card-title fw-semibold">AUTOMOBILE</h5>
-            <p class="card-text pb-5">Applications related to coolants, fuel, liquified, gasses, oils, paint, solvents.</p>
-            <a href="#" class="btn serving-button">Know More</a>
+            <img src="Images/T-2.png" alt="Drum Transfer" />
           </div>
-        </div>
-        <div class="card Serving-card">
-          <img src="Images/CHEMICAL & PHARMA.png" class="img-fluid" alt="CHEMICAL & PHARMA">
-          <div class="card-body">
-            <h5 class="card-title fw-semibold">CHEMICAL & PHARMA</h5>
-            <p class="card-text pb-5">Applications related to abrasives, acids, creams, gels, paste, resins, solvents and syrups.</p>
-            <a href="#" class="btn serving-button">Know More</a>
+
+          <div class="timeline-section right">
+            <div class="number">
+              03<span
+                style="
+                  font-size: 15px;
+                  color: rgb(32, 32, 32);
+                  padding-left: 10px;
+                "
+                >Positive Suction Head</span
+              >
+            </div>
+            <img src="Images/T-3.png" alt="Positive Suction Head" />
           </div>
-        </div>
-        <div class="card Serving-card Serving-card">
-          <img src="Images/ELECTROPLATING.png" class="img-fluid" alt="ELECTROPLATING">
-          <div class="card-body">
-            <h5 class="card-title fw-semibold">ELECTROPLATING</h5>
-            <p class="card-text pb-5">Applications related to acids, condensation, insulating resins, PH control, galvanic tanks.</p>
-            <a href="#" class="btn serving-button">Know More</a>
+
+          <div class="timeline-section left">
+            <div class="number">
+              04<span
+                style="
+                  font-size: 15px;
+                  color: rgb(32, 32, 32);
+                  padding-left: 10px;
+                "
+                >Immersed</span
+              >
+            </div>
+            <img src="Images/T-4.png" alt="Immersed" />
           </div>
-        </div>
-        <div class="card Serving-card">
-          <img src="Images/FOOD AND BEVERAGE.png" class="img-fluid" alt="FOOD & BEVERAGE">
-          <div class="card-body">
-            <h5 class="card-title fw-semibold">FOOD AND BEVERAGE</h5>
-            <p class="card-text pb-5">Applications related to alcohol, aromas, chocolate, cream, milk, pasta, syrup.</p>
-            <a href="#" class="btn serving-button">Know More</a>
+
+          <div class="timeline-section right">
+            <div class="number">
+              05<span
+                style="
+                  font-size: 15px;
+                  color: rgb(32, 32, 32);
+                  padding-left: 10px;
+                "
+                >Twin Suction and Delivery Manifold</span
+              >
+            </div>
+            <img
+              src="Images/T-5.png"
+              alt="Twin Suction and Delivery Manifold"
+            />
           </div>
-        </div>
-        <div class="card Serving-card">
-          <img src="Images/WASTE WATER.png" class="img-fluid" alt="WASTE WATER">
-          <div class="card-body">
-            <h5 class="card-title fw-semibold">WASTE WATER</h5>
-            <p class="card-text pb-5">Applications related to clarifier sludge, dosing chemicals, filter press, PH filtration.</p>
-            <a href="#" class="btn serving-button">Know More</a>
+
+          <div class="timeline-section left">
+            <div class="number">
+              06<span
+                style="
+                  font-size: 15px;
+                  color: rgb(32, 32, 32);
+                  padding-left: 10px;
+                "
+                >Twin Suction Manifold</span
+              >
+            </div>
+            <img src="Images/T-6.png" alt="Twin Suction Manifold" />
           </div>
         </div>
       </div>
 
-      <!-- Carousel Controls -->
-      <button class="carousel-prev-btn btn">‹</button>
-      <button class="carousel-next-btn btn">›</button>
-    </div>
-  </div>
-</section>
+      <!-- Mobile/Tablet Carousel -->
+      <div
+        id="timelineCarousel"
+        class="carousel slide timeline-carousel d-flex d-lg-none"
+        data-bs-ride="carousel"
+      >
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img
+              src="Images/T-1.png"
+              class="d-block w-100"
+              alt="Self-priming"
+            />
+            <div class="carousel-caption">
+              <h5>01. Self-priming</h5>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img
+              src="Images/T-2.png"
+              class="d-block w-100"
+              alt="Drum Transfer"
+            />
+            <div class="carousel-caption">
+              <h5>02. Drum Transfer</h5>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img
+              src="Images/T-3.png"
+              class="d-block w-100"
+              alt="Positive Suction Head"
+            />
+            <div class="carousel-caption">
+              <h5>03. Positive Suction Head</h5>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="Images/T-4.png" class="d-block w-100" alt="Immersed" />
+            <div class="carousel-caption">
+              <h5>04. Immersed</h5>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img
+              src="Images/T-5.png"
+              class="d-block w-100"
+              alt="Twin Suction and Delivery Manifold"
+            />
+            <div class="carousel-caption">
+              <h5>05. Twin Suction and Delivery Manifold</h5>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img
+              src="Images/T-6.png"
+              class="d-block w-100"
+              alt="Twin Suction Manifold"
+            />
+            <div class="carousel-caption">
+              <h5>06. Twin Suction Manifold</h5>
+            </div>
+          </div>
+        </div>
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#timelineCarousel"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#timelineCarousel"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon"></span>
+        </button>
+      </div>
+    </section>
 
+    <!-- Serving Diverse Industrial Needs -->
 
- <!-- Signature Expertise -->
+    <section class="animate-item">
+      <div class="container py-5">
+        <h1 class="mb-4 text-start">
+          Serving Diverse Industrial<br />
+          Needs
+        </h1>
 
-  <section class="py-5 animate-item">
-    <div class="container text-center">
-      <h1 class="mb-3">Our Signature Expertise</h1>
-      <p class="mb-5">
-        Delivering complete engineering solutions through quality products,<br>
-        reliable service, genuine spares, and seamless installations.
+        <!-- Carousel for all screens -->
+        <div class="carousel-container position-relative">
+          <div class="carousel-track d-flex">
+            <!-- Cards -->
+            <div class="card Serving-card">
+              <img
+                src="Images/AUTOMOBILE.png"
+                class="img-fluid"
+                alt="AUTOMOBILE"
+              />
+              <div class="card-body">
+                <h5 class="card-title fw-semibold">AUTOMOBILE</h5>
+                <p class="card-text pb-5">
+                  Applications related to coolants, fuel, liquified, gasses,
+                  oils, paint, solvents.
+                </p>
+                <a href="#" class="btn serving-button">Know More</a>
+              </div>
+            </div>
+            <div class="card Serving-card">
+              <img
+                src="Images/CHEMICAL & PHARMA.png"
+                class="img-fluid"
+                alt="CHEMICAL & PHARMA"
+              />
+              <div class="card-body">
+                <h5 class="card-title fw-semibold">CHEMICAL & PHARMA</h5>
+                <p class="card-text pb-5">
+                  Applications related to abrasives, acids, creams, gels, paste,
+                  resins, solvents and syrups.
+                </p>
+                <a href="#" class="btn serving-button">Know More</a>
+              </div>
+            </div>
+            <div class="card Serving-card Serving-card">
+              <img
+                src="Images/ELECTROPLATING.png"
+                class="img-fluid"
+                alt="ELECTROPLATING"
+              />
+              <div class="card-body">
+                <h5 class="card-title fw-semibold">ELECTROPLATING</h5>
+                <p class="card-text pb-5">
+                  Applications related to acids, condensation, insulating
+                  resins, PH control, galvanic tanks.
+                </p>
+                <a href="#" class="btn serving-button">Know More</a>
+              </div>
+            </div>
+            <div class="card Serving-card">
+              <img
+                src="Images/FOOD AND BEVERAGE.png"
+                class="img-fluid"
+                alt="FOOD & BEVERAGE"
+              />
+              <div class="card-body">
+                <h5 class="card-title fw-semibold">FOOD AND BEVERAGE</h5>
+                <p class="card-text pb-5">
+                  Applications related to alcohol, aromas, chocolate, cream,
+                  milk, pasta, syrup.
+                </p>
+                <a href="#" class="btn serving-button">Know More</a>
+              </div>
+            </div>
+            <div class="card Serving-card">
+              <img
+                src="Images/WASTE WATER.png"
+                class="img-fluid"
+                alt="WASTE WATER"
+              />
+              <div class="card-body">
+                <h5 class="card-title fw-semibold">WASTE WATER</h5>
+                <p class="card-text pb-5">
+                  Applications related to clarifier sludge, dosing chemicals,
+                  filter press, PH filtration.
+                </p>
+                <a href="#" class="btn serving-button">Know More</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Carousel Controls -->
+          <button class="carousel-prev-btn btn">‹</button>
+          <button class="carousel-next-btn btn">›</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Signature Expertise -->
+
+    <section class="py-5 animate-item">
+      <div class="container text-center">
+        <h1 class="mb-3">Our Signature Expertise</h1>
+        <p class="mb-5">
+          Delivering complete engineering solutions through quality products,<br />
+          reliable service, genuine spares, and seamless installations.
+        </p>
+
+        <div class="expertise-flow">
+          <!-- PRODUCT -->
+          <div class="expertise-item">
+            <img
+              src="Images/PRODUCT.png"
+              class="img-fluid Expertise mb-2"
+              alt="PRODUCT"
+            />
+            <p class="fw-semibold">PRODUCT</p>
+            <div class="connector">
+              <svg viewBox="0 0 150 80">
+                <path d="M0,60 C50,0 100,0 150,60"></path>
+                <polygon points="145,57 150,60 145,63"></polygon>
+              </svg>
+            </div>
+          </div>
+
+          <!-- SERVICE -->
+          <div class="expertise-item">
+            <img
+              src="Images/SERVICE.png"
+              class="img-fluid Expertise mb-2"
+              alt="SERVICE"
+            />
+            <p class="fw-semibold">SERVICE</p>
+            <div class="connector">
+              <svg viewBox="0 0 150 80">
+                <path d="M0,20 C50,80 100,80 150,20"></path>
+                <polygon points="145,17 150,20 145,23"></polygon>
+              </svg>
+            </div>
+          </div>
+
+          <!-- SPARES -->
+          <div class="expertise-item">
+            <img
+              src="Images/SPARES.png"
+              class="img-fluid Expertise mb-2"
+              alt="SPARES"
+            />
+            <p class="fw-semibold">SPARES</p>
+            <div class="connector">
+              <svg viewBox="0 0 150 80">
+                <path d="M0,60 C50,0 100,0 150,60"></path>
+                <polygon points="145,57 150,60 145,63"></polygon>
+              </svg>
+            </div>
+          </div>
+
+          <!-- INSTALLATION -->
+          <div class="expertise-item">
+            <img
+              src="Images/INSTALLATION.png"
+              class="img-fluid Expertise mb-2"
+              alt="INSTALLATION"
+            />
+            <p class="fw-semibold">INSTALLATION</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Building Success Together -->
+    <section class="mt-5 animate-item">
+      <h1 class="text-center pb-3">Building Success Together</h1>
+      <p class="text-center pb-4">
+        We’re proud to collaborate with leading brands and organizations that
+        <br />
+        trust our expertise and innovation
+      </p>
+      <div class="container text-center">
+        <div class="expertise-scroll-wrapper">
+          <!-- Top row (moves left) -->
+          <div class="expertise-scroll-row expertise-scroll-left">
+            <img src="Images/1.png" alt="Image 1" />
+            <img src="Images/2.png" alt="Image 2" />
+            <img src="Images/3.png" alt="Image 3" />
+            <img src="Images/4.png" alt="Image 4" />
+            <!-- duplicate for seamless loop -->
+            <img src="Images/1.png" alt="Image 1" />
+            <img src="Images/2.png" alt="Image 2" />
+            <img src="Images/3.png" alt="Image 3" />
+            <img src="Images/4.png" alt="Image 4" />
+          </div>
+
+          <!-- Bottom row (moves right) -->
+          <div class="expertise-scroll-row expertise-scroll-right">
+            <img src="Images/5.png" alt="Image 5" />
+            <img src="Images/6.png" alt="Image 6" />
+            <img src="Images/7.png" alt="Image 7" />
+            <img src="Images/8.png" alt="Image 8" />
+            <!-- duplicate for seamless loop -->
+            <img src="Images/5.png" alt="Image 5" />
+            <img src="Images/6.png" alt="Image 6" />
+            <img src="Images/7.png" alt="Image 7" />
+            <img src="Images/8.png" alt="Image 8" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sign Up Now -->
+    <section class="mt-5 animate-item">
+      <h1 class="text-center">Sign Up Now</h1>
+      <p class="text-center">
+        To get regular updates about<br />latest offers and product launches!
       </p>
 
-      <div class="expertise-flow">
-        <!-- PRODUCT -->
-        <div class="expertise-item">
-          <img src="Images/PRODUCT.png" class="img-fluid Expertise mb-2" alt="PRODUCT">
-          <p class="fw-semibold">PRODUCT</p>
-          <div class="connector">
-            <svg viewBox="0 0 150 80">
-              <path d="M0,60 C50,0 100,0 150,60"></path>
-              <polygon points="145,57 150,60 145,63"></polygon>
-            </svg>
-          </div>
-        </div>
-
-        <!-- SERVICE -->
-        <div class="expertise-item">
-          <img src="Images/SERVICE.png" class="img-fluid Expertise mb-2" alt="SERVICE">
-          <p class="fw-semibold">SERVICE</p>
-          <div class="connector">
-            <svg viewBox="0 0 150 80">
-              <path d="M0,20 C50,80 100,80 150,20"></path>
-              <polygon points="145,17 150,20 145,23"></polygon>
-            </svg>
-          </div>
-        </div>
-
-        <!-- SPARES -->
-        <div class="expertise-item">
-          <img src="Images/SPARES.png" class="img-fluid Expertise mb-2" alt="SPARES">
-          <p class="fw-semibold">SPARES</p>
-          <div class="connector">
-            <svg viewBox="0 0 150 80">
-              <path d="M0,60 C50,0 100,0 150,60"></path>
-              <polygon points="145,57 150,60 145,63"></polygon>
-            </svg>
-          </div>
-        </div>
-
-        <!-- INSTALLATION -->
-        <div class="expertise-item">
-          <img src="Images/INSTALLATION.png" class="img-fluid Expertise mb-2" alt="INSTALLATION">
-          <p class="fw-semibold">INSTALLATION</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-<!-- Building Success Together -->
-<section class="mt-5 animate-item">
-  <h1 class="text-center pb-3">Building Success Together</h1>
-  <p class="text-center pb-4">We’re proud to collaborate with leading brands and organizations that <br> trust our expertise and innovation</p>
-  <div class="container text-center">
-    <div class="expertise-scroll-wrapper">
-      
-      <!-- Top row (moves left) -->
-      <div class="expertise-scroll-row expertise-scroll-left">
-        <img src="Images/1.png" alt="Image 1">
-        <img src="Images/2.png" alt="Image 2">
-        <img src="Images/3.png" alt="Image 3">
-        <img src="Images/4.png" alt="Image 4">
-        <!-- duplicate for seamless loop -->
-        <img src="Images/1.png" alt="Image 1">
-        <img src="Images/2.png" alt="Image 2">
-        <img src="Images/3.png" alt="Image 3">
-        <img src="Images/4.png" alt="Image 4">
-      </div>
-
-      <!-- Bottom row (moves right) -->
-      <div class="expertise-scroll-row expertise-scroll-right">
-        <img src="Images/5.png" alt="Image 5">
-        <img src="Images/6.png" alt="Image 6">
-        <img src="Images/7.png" alt="Image 7">
-        <img src="Images/8.png" alt="Image 8">
-        <!-- duplicate for seamless loop -->
-        <img src="Images/5.png" alt="Image 5">
-        <img src="Images/6.png" alt="Image 6">
-        <img src="Images/7.png" alt="Image 7">
-        <img src="Images/8.png" alt="Image 8">
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<!-- Sign Up Now -->
-<section class="mt-5 animate-item">
-  <h1 class="text-center">Sign Up Now</h1>
-  <p class="text-center">To get regular updates about<br>latest offers and product launches!</p>
-
-  <div class="container" style="font-family: 'Lato';">
-    <center>
-      <div class="d-flex text-align-center justify-content-between sign-up">
-        <input type="email" id="emailInput" placeholder="Enter Your Email" style="padding:8px; border:none; border-radius:5px; width: 55%;">
-        <button class="signup-btn text-dark" onclick="validateForm()">Submit</button>
-      </div>
-
-      <div class="gdpr-check justify-content-md-center justify-content-start">
-        <input type="checkbox" id="gdpr">
-        <label for="gdpr">Accept GDPR Terms</label>
-      </div>
-    </center>
-  </div>
-</section>
-
-<!-- Footer Section -->
-<footer class="animate-item">
-  <div class="container">
-    <div class="row">
-      <div class="col-8 col-md-3 col-lg-3">
-        <img style="box-shadow: 0px 5px 10px rgba(23, 23, 23,0.3);" src="Images/f-logo.png" alt="Logo" class="img-fluid w-50" srcset="">
-      </div>
-      <div class="col-6 col-md-5 col-lg-3 ">
-        <p>SiteMap</p>
-        <ul class="sitemap-ul">
-          <li>About</li>
-          <li>Contact Us</li>
-          <li>Bank Details</li>
-          
-        </ul>
-      </div>
-      <div class="col-6 col-md-4 col-lg-3">
-        <p>Our Service</p>
-        <ul class="sitemap-ul">
-          <li>Service Request</li>
-          <li>Enquiry</li>
-          <li>Detailed Enquiry</li>
-
-        </ul>
-      </div>
-      <div class="col-12 col-md-6 col-lg-3">
-        <p>Contact Information</p>
-        <div>
-          <div class="d-flex ">
-            <img src="Images/pin-01.png" width="22px" class="mt-2 me-2" height="22px" alt="Pin">
-            <p >No.96-A, TTK Road,, Alwarpet, Chennai, Tamil Nadu 600018,INDIA.</p>
+      <div class="container" style="font-family: 'Lato'">
+        <center>
+          <div class="d-flex text-align-center justify-content-between sign-up">
+            <input
+              type="email"
+              id="emailInput"
+              placeholder="Enter Your Email"
+              style="padding: 8px; border: none; border-radius: 5px; width: 55%"
+            />
+            <button class="signup-btn text-dark" onclick="validateForm()">
+              Submit
+            </button>
           </div>
 
-          <div class="d-flex ">
-            <img src="Images/phone.png" width="22px" class="mt-2 me-2" height="22px" alt="Phone">
-            <p class="pt-1">+91-44-4301 2183 OR <br> +91-7200627289</p>
+          <div
+            class="gdpr-check justify-content-md-center justify-content-start"
+          >
+            <input type="checkbox" id="gdpr" />
+            <label for="gdpr">Accept GDPR Terms</label>
           </div>
-          <div class="d-flex ">
-            <img src="Images/mail-01.png" width="22px" class="mt-2 me-2" height="22px" alt="Mail">
-            <p class="pt-1">sales@neweraengineers.com</p>
+        </center>
+      </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="animate-item">
+      <div class="container">
+        <div class="row">
+          <div class="col-8 col-md-3 col-lg-3">
+            <img
+              style="box-shadow: 0px 5px 10px rgba(23, 23, 23, 0.3)"
+              src="Images/f-logo.png"
+              alt="Logo"
+              class="img-fluid w-50"
+              srcset=""
+            />
           </div>
-          <div class="d-flex ">
-            <img src="Images/clock.png" width="22px" class="mt-2 me-2" height="22px" alt="Clock">
-            <p class="pt-1">Mon - Fri / 10:00 AM - 5:00 PM</p>
+          <div class="col-6 col-md-5 col-lg-3">
+            <p>SiteMap</p>
+            <ul class="sitemap-ul">
+              <li>About</li>
+              <li>Contact Us</li>
+              <li>Bank Details</li>
+            </ul>
+          </div>
+          <div class="col-6 col-md-4 col-lg-3">
+            <p>Our Service</p>
+            <ul class="sitemap-ul">
+              <li>Service Request</li>
+              <li>Enquiry</li>
+              <li>Detailed Enquiry</li>
+            </ul>
+          </div>
+          <div class="col-12 col-md-6 col-lg-3">
+            <p>Contact Information</p>
+            <div>
+              <div class="d-flex">
+                <img
+                  src="Images/pin-01.png"
+                  width="22px"
+                  class="mt-2 me-2"
+                  height="22px"
+                  alt="Pin"
+                />
+                <p>
+                  No.96-A, TTK Road,, Alwarpet, Chennai, Tamil Nadu
+                  600018,INDIA.
+                </p>
+              </div>
+
+              <div class="d-flex">
+                <img
+                  src="Images/phone.png"
+                  width="22px"
+                  class="mt-2 me-2"
+                  height="22px"
+                  alt="Phone"
+                />
+                <p class="pt-1">
+                  +91-44-4301 2183 OR <br />
+                  +91-7200627289
+                </p>
+              </div>
+              <div class="d-flex">
+                <img
+                  src="Images/mail-01.png"
+                  width="22px"
+                  class="mt-2 me-2"
+                  height="22px"
+                  alt="Mail"
+                />
+                <p class="pt-1">sales@neweraengineers.com</p>
+              </div>
+              <div class="d-flex">
+                <img
+                  src="Images/clock.png"
+                  width="22px"
+                  class="mt-2 me-2"
+                  height="22px"
+                  alt="Clock"
+                />
+                <p class="pt-1">Mon - Fri / 10:00 AM - 5:00 PM</p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  </div>
-  
-<div class="container-fluid Copyright">
-    <div class="container d-md-flex justify-content-evenly">
-      <p class="text-md-center text-start">© Copyright – new era engineers & Traders</p>
-      <div>
-        <img src="Images/Facebook.png" class="img-fluid" alt="Facebook">
-        <img src="Images/Instagram.png" class="img-fluid" alt="Instagram">
-        <img src="Images/LinkedIn.png" class="img-fluid" alt="LinkedIn">
-        <img src="Images/Whatsapp.png" class="img-fluid" alt="Whatsapp">
+
+      <div class="container-fluid Copyright">
+        <div class="container d-md-flex justify-content-evenly">
+          <p class="text-md-center text-start">
+            © Copyright – new era engineers & Traders
+          </p>
+          <div>
+            <img src="Images/Facebook.png" class="img-fluid" alt="Facebook" />
+            <img src="Images/Instagram.png" class="img-fluid" alt="Instagram" />
+            <img src="Images/LinkedIn.png" class="img-fluid" alt="LinkedIn" />
+            <img src="Images/Whatsapp.png" class="img-fluid" alt="Whatsapp" />
+          </div>
+          <p>Terms & Conditions | Privacy Policy</p>
+        </div>
       </div>
-      <p>Terms & Conditions | Privacy Policy</p>
-    </div>
-</div>
-</footer>
-<script src="js/Animation-Script.js"></script>
-<script src="js/Progressbar.js"></script> 
-<script src="js/Header.js"></script> 
-<script src="js/Timeline.js"></script> 
-<script src="js/Industrial-needs.js"></script>
-<script src="js/sign-up.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    </footer>
+    <script src="js/Animation-Script.js"></script>
+    <script src="js/Progressbar.js"></script>
+    <script src="js/Header.js"></script>
+    <script src="js/Timeline.js"></script>
+    <script src="js/Industrial-needs.js"></script>
+    <script src="js/sign-up.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
 
-<!--UP-ARROW JavaScript -->
-<script>
-  const scrollBtn = document.getElementById('scrollTopBtn');
+    <!--UP-ARROW JavaScript -->
+    <script>
+      const scrollBtn = document.getElementById("scrollTopBtn");
 
-  // Show button after scrolling down 100px
-  window.onscroll = function() {
-    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-      scrollBtn.style.display = "block";
-    } else {
+      // Show button after scrolling down 100px
+      window.onscroll = function () {
+        if (
+          document.body.scrollTop > 100 ||
+          document.documentElement.scrollTop > 100
+        ) {
+          scrollBtn.style.display = "block";
+        } else {
+          scrollBtn.style.display = "none";
+        }
+      };
+
+      // Scroll to top when clicked
+      scrollBtn.addEventListener("click", () => {
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth",
+        });
+      });
+
+      // Hide initially
       scrollBtn.style.display = "none";
-    }
-  };
+    </script>
 
-  // Scroll to top when clicked
-  scrollBtn.addEventListener('click', () => {
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth'
-    });
-  });
+    <!-- Footer Stays bottom script -->
+    <script>
+      (function () {
+        function adjustFooter() {
+          const footer = document.querySelector("footer");
+          if (!footer) return;
 
-  // Hide initially
-  scrollBtn.style.display = "none";
-</script>
+          const bodyHeight = document.body.offsetHeight;
+          const windowHeight = window.innerHeight;
 
+          if (bodyHeight < windowHeight) {
+            footer.style.position = "absolute";
+            footer.style.bottom = "0";
+            footer.style.width = "100%";
+          } else {
+            footer.style.position = "static";
+          }
+        }
 
-
-
-<!-- Footer Stays bottom script -->
-<script>
-  (function() {
-  function adjustFooter() {
-    const footer = document.querySelector('footer');
-    if (!footer) return;
-
-    const bodyHeight = document.body.offsetHeight;
-    const windowHeight = window.innerHeight;
-
-    if (bodyHeight < windowHeight) {
-      footer.style.position = 'absolute';
-      footer.style.bottom = '0';
-      footer.style.width = '100%';
-    } else {
-      footer.style.position = 'static';
-    }
-  }
-
-  window.addEventListener('load', adjustFooter);
-  window.addEventListener('resize', adjustFooter);
-})();
-
-</script>
-</body>
+        window.addEventListener("load", adjustFooter);
+        window.addEventListener("resize", adjustFooter);
+      })();
+    </script>
+  </body>
 </html>

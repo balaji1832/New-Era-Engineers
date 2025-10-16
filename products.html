@@ -1,179 +1,455 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Products</title>
-    <link rel="icon" href="Images/Group.svg">
-    <link rel="stylesheet" href="style.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet"> 
-    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
-
-</head>
-<body>
-  <!-- Scroll Progress Bar -->
-<div id="scroll-progress"></div>
-<!-- HTML: Sticky Scroll-to-Top Icon -->
-<div class="scroll-top" id="scrollTopBtn">
-  &#8679; <!-- Up arrow icon -->
-</div>
-  <!-- Header -->
-  <header class="ne-header sticky-top ">
-    <div class="container d-flex align-items-center justify-content-between">
-      
-      <!-- Logo -->
-      <div class="ne-logo">
-        <img src="Images/logo.png" alt="New Era Logo">
-      </div>
-
-      <!-- Navigation (Desktop) -->
-      <nav class="ne-nav d-none d-lg-block">
-        <ul>
-          <li><a href="index.html" class="ne-link">Home</a></li>
-          <li><a href="Aboutus.html" class="ne-link">About Us</a></li>
-          <li><a href="products.html" class="ne-link ne-active">Products</a></li>
-          <li><a href="#" class="ne-link">Industries</a></li>
-          <li><a href="#" class="ne-link">Enquiry</a></li>
-          <li><a href="#" class="ne-link">Service</a></li>
-          <li><a href="#" class="ne-link">Contact Us</a></li>
-          <li><a href="#" class="ne-link">Bank &amp; Statutory</a></li>
-        </ul>
-      </nav>
-
-      <!-- Right Section -->
-      <div class="d-flex align-items-center">
-        <button class="ne-toggle d-lg-none"><i class="bi bi-list"></i></button>
-        <div class="ne-search-icon"><i class="bi bi-search"></i></div>
-      </div>
+    <link rel="icon" href="Images/Group.svg" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Scroll Progress Bar -->
+    <div id="scroll-progress"></div>
+    <!-- HTML: Sticky Scroll-to-Top Icon -->
+    <div class="scroll-top" id="scrollTopBtn">
+      &#8679;
+      <!-- Up arrow icon -->
     </div>
+    <!-- Header -->
+    <header class="ne-header sticky-top ">
+      <div class="container">
+        <!-- ===== HEADER ===== -->
+        <nav class="navbar navbar-expand-lg navbar-light sticky-top">
+          <div class="container-fluid">
+            <!-- Left: Brand -->
+            <a class="navbar-brand" href="#">
+              <img src="Images/logo.png" alt="New Era Engineers Logo" />
+            </a>
 
-    <!-- Mobile Menu -->
-    <div class="ne-mobile-nav" id="neMobileNav">
-      <ul>
-        <li><a href="index.html" class="ne-link ">Home</a></li>
-        <li><a href="Aboutus.html" class="ne-link">About Us</a></li>
-        <li><a href="products.html" class="ne-link ne-active">Products</a></li>
-        <li><a href="#" class="ne-link">Industries</a></li>
-        <li><a href="#" class="ne-link">Enquiry</a></li>
-        <li><a href="#" class="ne-link">Service</a></li>
-        <li><a href="#" class="ne-link">Contact Us</a></li>
-        <li><a href="#" class="ne-link">Bank &amp; Statutory</a></li>
-      </ul>
-      
-    </div>
+            <!-- Right (SM/TAB): [hamburger][search] like your screenshot -->
+            <div class="d-flex align-items-center ms-auto d-lg-none">
+              <!-- Hamburger toggles collapse -->
+              <button
+                class="navbar-toggler icon-btn"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarNavDropdown"
+                aria-controls="navbarNavDropdown"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+              >
+                <!-- Use icon instead of default toggler bars -->
+                <i class="bi bi-list icon-size"></i>
+              </button>
+              <!-- Search icon immediately AFTER hamburger -->
+              <button
+                id="neSearchToggleMobile"
+                class="btn btn-link icon-btn icon-gap"
+                type="button"
+                aria-expanded="false"
+                aria-controls="neSearchBox"
+              >
+                <i class="bi bi-search icon-size"></i>
+              </button>
+            </div>
 
-    <!-- Search Box -->
-    <div class="ne-search-box" id="neSearchBox">
-      <div class="container text-center">
-        <input type="text" placeholder="Search here...">
+            <!-- Collapsible nav -->
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+              <ul class="navbar-nav ms-auto align-items-lg-center">
+                <li class="nav-item">
+                  <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="Aboutus.html">About Us</a>
+                </li>
+
+                <!-- PRODUCTS DROPDOWN -->
+                <li class="nav-item dropdown position-static">
+                  <a
+                    class="nav-link ne-active dropdown-toggle d-flex align-items-center gap-1"
+                    href="#"
+                    id="productsDropdown"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    Products
+                    <i
+                      class="bi bi-chevron-down small"
+                      style="font-size: 0.75rem"
+                    ></i>
+                  </a>
+
+                  <div
+                    class="dropdown-menu mega-menu"
+                    aria-labelledby="productsDropdown"
+                  >
+                    <div class="row">
+                      <div class="col-lg-2 col-md-4">
+                        <h6>100% Leakproof Sealless Pumps</h6>
+                        <a href="products.html">Air Operated Diaphragm Pumps</a>
+                        <a href="#"
+                          >Chemical Thermoplastic Pumps - Vertical Glandless</a
+                        >
+                        <a href="#">Drum/Barrel/Carboy Pumps</a>
+                        <a href="#">Thermoplastic Magnetic Drive Pumps</a>
+                        <a href="#">Metallic Magnetic Drive Pumps</a>
+                      </div>
+
+                      <div class="col-lg-2 col-md-4">
+                        <h6>Centrifugal Pumps</h6>
+                        <a href="#">Chemical Metallic Process Pumps</a>
+                        <a href="#">Chemical Thermoplastic Horizontal Pumps</a>
+                        <a href="#">FDA - Centrifugal Sanitary Pumps</a>
+                        <a href="#">Horizontal and Vertical Multistage Pumps</a>
+                        <a href="#">Non-Clog Horizontal Self Priming Pumps</a>
+                        <a href="#">Non-Clog Vertical Submersible Pumps</a>
+                      </div>
+
+                      <div class="col-lg-2 col-md-4">
+                        <h6>Positive Displacement Pumps</h6>
+                        <a href="#">AODD Sanitary Pumps</a>
+                        <a href="#">Dosing & Metering Pumps</a>
+                        <a href="#">External Gear Pumps</a>
+                        <a href="#">Hose / Peristaltic Pumps</a>
+                        <a href="#">Internal Gear Pumps</a>
+                        <a href="#">Rotary Lobe Pumps</a>
+                        <a href="#">Screw Pumps</a>
+                      </div>
+
+                      <div class="col-lg-2 col-md-4">
+                        <h6>Motors</h6>
+                        <a href="#">Crane and Hoist Duty Motors</a>
+                        <a href="#">DC Motors</a>
+                        <a href="#">Explosion-Proof / Flameproof Motors</a>
+                        <a href="#">Helical Geared Motors</a>
+                        <a href="#">Squirrel Cage Motors</a>
+                      </div>
+
+                      <div class="col-lg-2 col-md-4">
+                        <h6>Gear Boxes</h6>
+                        <a href="#">Helical Gear Boxes</a>
+                        <a href="#">Worm Gear Boxes</a>
+                      </div>
+
+                      <div class="col-lg-2 col-md-4">
+                        <h6>Level Controllers</h6>
+                        <a href="#">Water Switch Controls</a>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+
+                <!-- INDUSTRIES DROPDOWN -->
+                <li class="nav-item dropdown position-static">
+                  <a
+                    class="nav-link dropdown-toggle d-flex align-items-center gap-1"
+                    href="#"
+                    id="industriesDropdown"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    Industries
+                    <i
+                      class="bi bi-chevron-down small"
+                      style="font-size: 0.75rem"
+                    ></i>
+                  </a>
+
+                  <div
+                    class="dropdown-menu mega-menu"
+                    aria-labelledby="industriesDropdown"
+                  >
+                    <div class="row g-0">
+                      <div class="col-lg-2 col-md-4">
+                        <a href="#" class="dropdown-item fw-semibold"
+                          >Automobile Industry</a
+                        >
+                      </div>
+                      <div class="col-lg-3 col-md-4">
+                        <a href="#" class="dropdown-item fw-semibold">
+                          Chemical and Pharmaceutical Industry
+                        </a>
+                      </div>
+                      <div class="col-lg-2 col-md-4">
+                        <a href="#" class="dropdown-item fw-semibold"
+                          >Electroplating Industry</a
+                        >
+                      </div>
+                      <div class="col-lg-2 col-md-4">
+                        <a href="#" class="dropdown-item fw-semibold"
+                          >Food and Beverage Industry</a
+                        >
+                      </div>
+                      <div class="col-lg-3 col-md-4">
+                        <a href="#" class="dropdown-item fw-semibold"
+                          >Wastewater Treatment Industry</a
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </li>
+
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Enquiry</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Service</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Contact Us</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Bank & Statutory</a>
+                </li>
+
+                <!-- Desktop search icon at far right -->
+                <li class="nav-item ms-lg-2 d-none d-lg-block">
+                  <button
+                    id="neSearchToggle"
+                    class="btn btn-link nav-link p-0 icon-btn"
+                    type="button"
+                    aria-expanded="false"
+                    aria-controls="neSearchBox"
+                  >
+                    <i class="bi bi-search" style="font-size: 1.1rem"></i>
+                  </button>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+
+        <!-- Slide-down Search -->
+        <div class="search-box" id="neSearchBox">
+          <div class="inner text-center">
+            <input
+              id="neSearchInput"
+              class="search-input"
+              type="text"
+              placeholder="Search products, pumps, motors..."
+            />
+          </div>
+        </div>
       </div>
-    </div>
-
-  </header>
-
+    </header>
 
     <!-- Banner Section -->
     <!-- Desktop Banner -->
-<section class="banner-section  d-none d-md-block">
-  <div class="container-fluid p-0">
-    <img src="Images/web-banner-new-era.jpg" alt="Banner Image" class="img-fluid banner-img w-100">
-  </div>
-</section>
-
-<!-- Mobile Banner -->
-<section class="banner-section  d-block d-md-none">
-  <div class="container p-0">
-    <img src="Images/web-banner-mobile.jpg" alt="Banner Image" class="img-fluid banner-img w-100">
-  </div>
-</section>
-
-<!-- AIR OPERATED DIAPHRAGM PUMP DESCRIPTION -->
- <section class="mt-5">
-    <div class="container ">
-        <div class="row">
-            <div class="col-12 col-lg-6">
-                <h2 class="fw-semibold">AIR OPERATED DIAPHRAGM <br> PUMP DESCRIPTION</h2>
-                <hr class="underline-products" >
-            </div>
-            <div class="col-12 col-lg-6">
-                <p>Air-operated double diaphragm pumps are ideal for pumping liquids with abrasive, corrosive, explosive, and high apparent viscosity, even if containing suspended solids. The stall-prevention circuit guarantees a safe operation without requiring lubricated air. These pumps have achieved unprecedented levels of versatility due to their dry self-priming, no mechanical seals hence no leakage, variable flow and pressure, completely portable, can run dry without damage, no rotating parts less wear and maintenance, does not generate heat, no complex controls required, ideal for abrasive, corrosive, shear sensitive and viscous fluids, intrinsically safe, no efficiency loss due to wear and tear or by changing pressure and flow.</p>
-        </div>
-    </div>
- </section>
-
- <!-- Tab-Pane Content -->
-   <section class="product-section my-5">
-  <div class="container">
-    
-    <!-- Centered Tabs -->
-    <ul class="nav nav-tabs  justify-content-center  mb-4" style="font-family: 'Raleway';font-weight: 500;" id="productTab" role="tablist">
-      <li class="nav-item" role="presentation">
-        <button class="nav-link active" id="spec-tab" data-bs-toggle="tab" data-bs-target="#spec" type="button" role="tab" aria-controls="spec" aria-selected="true">SPECIFICATION</button>
-      </li>
-      <li class="nav-item" role="presentation">
-        <button class="nav-link" id="features-tab" data-bs-toggle="tab" data-bs-target="#features" type="button" role="tab" aria-controls="features" aria-selected="false">FEATURES</button>
-      </li>
-      <li class="nav-item" role="presentation">
-        <button class="nav-link" id="applications-tab" data-bs-toggle="tab" data-bs-target="#applications" type="button" role="tab" aria-controls="applications" aria-selected="false">APPLICATIONS</button>
-      </li>
-      <li class="nav-item" role="presentation">
-        <button class="nav-link" id="moc-tab" data-bs-toggle="tab" data-bs-target="#moc" type="button" role="tab" aria-controls="moc" aria-selected="false">M.O.C</button>
-      </li>
-    </ul>
-
-    <!-- Tab Content + Image -->
-    <div class="row align-items-start mt-5">
-        <!-- left: Image -->
-      <div class="col-md-6  text-start">
-        <img src="Images/pumps-product.svg" alt="Pump"  class="img-fluid pumps-product">
+    <section class="banner-section d-none d-md-block">
+      <div class="container-fluid p-0">
+        <img
+          src="Images/web-banner-new-era.jpg"
+          alt="Banner Image"
+          class="img-fluid banner-img w-100"
+        />
       </div>
-      <!-- right: Tab Content -->
-      <div class="col-md-6  mb-4 mb-lg-0">
-        <div class="tab-content p-4 text-start ">
-          <div class="tab-pane fade show active" id="spec" role="tabpanel" aria-labelledby="spec-tab">
-            <div>
-                <p>Maximum Flow Rate 800 Lpm</p>
-                <p>Maximum Discharge Head or Pressure 8 Bar</p>
-                <p>Maximum Suction Lift Dry or Wet 7mwc</p>
-                <p>Maximum Solid Passage Size 50 mm</p>
-                <p>Maximum Temperature 95 Deg.C.</p>
-                <p>Maximum 40,000 cps</p>
-            </div>
-            <div>
-                <div class="download-brochure my-4 text-start ">
-                   <a href="https://neweraengineers.com/wp-content/uploads/2021/09/AIR-OPERATED-diaphragm-pumps.pdf" download class="btn btn-outline-primary d-inline-flex align-items-center">
-                     <i class="bi bi-download me-2"></i> Download Brochure
-                 </a>
-              </div>
+    </section>
 
-            </div>
-            
-          </div>
-          <div class="tab-pane fade" id="features" role="tabpanel" aria-labelledby="features-tab">
-           <div>
-                <p>Dry Self Primming</p>
-                <p>Can Handle Variable Viscosity & Specific Gravity</p>
-                <p>No Mechanical Seal or Gland Packing 100% Leak Proof</p>
-                <p>No Complex Controls required to vary speed</p>
-                <p>Solid Handling Capability to 80% and 50 mm size</p>
-                <p>Ideal for Shear Sensitive Fluids</p>
-            </div>
-            <div>
-                <div class="download-brochure my-4 text-start ">
-                   <a href="https://neweraengineers.com/wp-content/uploads/2021/09/AIR-OPERATED-diaphragm-pumps.pdf" download class="btn btn-outline-primary d-inline-flex align-items-center">
-                     <i class="bi bi-download me-2"></i> Download Brochure
-                 </a>
-              </div>
+    <!-- Mobile Banner -->
+    <section class="banner-section d-block d-md-none">
+      <div class="container p-0">
+        <img
+          src="Images/web-banner-mobile.jpg"
+          alt="Banner Image"
+          class="img-fluid banner-img w-100"
+        />
+      </div>
+    </section>
 
-            </div>
+    <!-- AIR OPERATED DIAPHRAGM PUMP DESCRIPTION -->
+    <section class="mt-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 col-lg-6">
+            <h2 class="fw-semibold">
+              AIR OPERATED DIAPHRAGM <br />
+              PUMP DESCRIPTION
+            </h2>
+            <hr class="underline-products" />
           </div>
-          <div class="tab-pane fade" id="applications" role="tabpanel" aria-labelledby="applications-tab">
-            <div class="row">
-                <div class="col-6">
+          <div class="col-12 col-lg-6">
+            <p>
+              Air-operated double diaphragm pumps are ideal for pumping liquids
+              with abrasive, corrosive, explosive, and high apparent viscosity,
+              even if containing suspended solids. The stall-prevention circuit
+              guarantees a safe operation without requiring lubricated air.
+              These pumps have achieved unprecedented levels of versatility due
+              to their dry self-priming, no mechanical seals hence no leakage,
+              variable flow and pressure, completely portable, can run dry
+              without damage, no rotating parts less wear and maintenance, does
+              not generate heat, no complex controls required, ideal for
+              abrasive, corrosive, shear sensitive and viscous fluids,
+              intrinsically safe, no efficiency loss due to wear and tear or by
+              changing pressure and flow.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tab-Pane Content -->
+    <section class="product-section my-5">
+      <div class="container">
+        <!-- Centered Tabs -->
+        <ul
+          class="nav nav-tabs justify-content-center mb-4"
+          style="font-family: 'Raleway'; font-weight: 500"
+          id="productTab"
+          role="tablist"
+        >
+          <li class="nav-item" role="presentation">
+            <button
+              class="nav-link active"
+              id="spec-tab"
+              data-bs-toggle="tab"
+              data-bs-target="#spec"
+              type="button"
+              role="tab"
+              aria-controls="spec"
+              aria-selected="true"
+            >
+              SPECIFICATION
+            </button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button
+              class="nav-link"
+              id="features-tab"
+              data-bs-toggle="tab"
+              data-bs-target="#features"
+              type="button"
+              role="tab"
+              aria-controls="features"
+              aria-selected="false"
+            >
+              FEATURES
+            </button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button
+              class="nav-link"
+              id="applications-tab"
+              data-bs-toggle="tab"
+              data-bs-target="#applications"
+              type="button"
+              role="tab"
+              aria-controls="applications"
+              aria-selected="false"
+            >
+              APPLICATIONS
+            </button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button
+              class="nav-link"
+              id="moc-tab"
+              data-bs-toggle="tab"
+              data-bs-target="#moc"
+              type="button"
+              role="tab"
+              aria-controls="moc"
+              aria-selected="false"
+            >
+              M.O.C
+            </button>
+          </li>
+        </ul>
+
+        <!-- Tab Content + Image -->
+        <div class="row align-items-start mt-5">
+          <!-- left: Image -->
+          <div class="col-md-6 text-start">
+            <img
+              src="Images/pumps-product.svg"
+              alt="Pump"
+              class="img-fluid pumps-product"
+            />
+          </div>
+          <!-- right: Tab Content -->
+          <div class="col-md-6 mb-4 mb-lg-0">
+            <div class="tab-content p-4 text-start">
+              <div
+                class="tab-pane fade show active"
+                id="spec"
+                role="tabpanel"
+                aria-labelledby="spec-tab"
+              >
+                <div>
+                  <p>Maximum Flow Rate 800 Lpm</p>
+                  <p>Maximum Discharge Head or Pressure 8 Bar</p>
+                  <p>Maximum Suction Lift Dry or Wet 7mwc</p>
+                  <p>Maximum Solid Passage Size 50 mm</p>
+                  <p>Maximum Temperature 95 Deg.C.</p>
+                  <p>Maximum 40,000 cps</p>
+                </div>
+                <div>
+                  <div class="download-brochure my-4 text-start">
+                    <a
+                      href="https://neweraengineers.com/wp-content/uploads/2021/09/AIR-OPERATED-diaphragm-pumps.pdf"
+                      download
+                      class="btn btn-outline-primary d-inline-flex align-items-center"
+                    >
+                      <i class="bi bi-download me-2"></i> Download Brochure
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="tab-pane fade"
+                id="features"
+                role="tabpanel"
+                aria-labelledby="features-tab"
+              >
+                <div>
+                  <p>Dry Self Primming</p>
+                  <p>Can Handle Variable Viscosity & Specific Gravity</p>
+                  <p>No Mechanical Seal or Gland Packing 100% Leak Proof</p>
+                  <p>No Complex Controls required to vary speed</p>
+                  <p>Solid Handling Capability to 80% and 50 mm size</p>
+                  <p>Ideal for Shear Sensitive Fluids</p>
+                </div>
+                <div>
+                  <div class="download-brochure my-4 text-start">
+                    <a
+                      href="https://neweraengineers.com/wp-content/uploads/2021/09/AIR-OPERATED-diaphragm-pumps.pdf"
+                      download
+                      class="btn btn-outline-primary d-inline-flex align-items-center"
+                    >
+                      <i class="bi bi-download me-2"></i> Download Brochure
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="tab-pane fade"
+                id="applications"
+                role="tabpanel"
+                aria-labelledby="applications-tab"
+              >
+                <div class="row">
+                  <div class="col-6">
                     <p>Acids and Abrasives</p>
                     <p>Biodiesel Industries</p>
                     <p>Ceramic Industries</p>
@@ -182,8 +458,8 @@
                     <p>Environmental Industries</p>
                     <p>Food Industries</p>
                     <p>Galvanic Industries</p>
-                </div>
-                <div class="col-6">
+                  </div>
+                  <div class="col-6">
                     <p>Mechanical Industries</p>
                     <p>Painting Industries</p>
                     <p>Petrochemical Industries</p>
@@ -191,250 +467,356 @@
                     <p>Textile Industries</p>
                     <p>Transfer Equipment</p>
                     <p>Tumbling</p>
+                  </div>
                 </div>
-            </div>
-            <div class="download-brochure my-4 text-start ">
-                   <a href="https://neweraengineers.com/wp-content/uploads/2021/09/AIR-OPERATED-diaphragm-pumps.pdf" download class="btn btn-outline-primary d-inline-flex align-items-center">
-                     <i class="bi bi-download me-2"></i> Download Brochure
-                 </a>
+                <div class="download-brochure my-4 text-start">
+                  <a
+                    href="https://neweraengineers.com/wp-content/uploads/2021/09/AIR-OPERATED-diaphragm-pumps.pdf"
+                    download
+                    class="btn btn-outline-primary d-inline-flex align-items-center"
+                  >
+                    <i class="bi bi-download me-2"></i> Download Brochure
+                  </a>
+                </div>
               </div>
-          </div>
-          <div class="tab-pane fade" id="moc" role="tabpanel" aria-labelledby="moc-tab">
-            <div>
-                <p>Aluminum</p>
-                <p>PVDF</p>
-                <p>Polypropylene With Glass Additive</p>
-                <p>No Complex Controls required to vary speed</p>
-                <p>SS316</p>
-                <p>Hastelloy C</p>
-            </div>
-            <div>
-                <div class="download-brochure my-4 text-start ">
-                   <a href="https://neweraengineers.com/wp-content/uploads/2021/09/AIR-OPERATED-diaphragm-pumps.pdf" download class="btn btn-outline-primary d-inline-flex align-items-center">
-                     <i class="bi bi-download me-2"></i> Download Brochure
-                 </a>
+              <div
+                class="tab-pane fade"
+                id="moc"
+                role="tabpanel"
+                aria-labelledby="moc-tab"
+              >
+                <div>
+                  <p>Aluminum</p>
+                  <p>PVDF</p>
+                  <p>Polypropylene With Glass Additive</p>
+                  <p>No Complex Controls required to vary speed</p>
+                  <p>SS316</p>
+                  <p>Hastelloy C</p>
+                </div>
+                <div>
+                  <div class="download-brochure my-4 text-start">
+                    <a
+                      href="https://neweraengineers.com/wp-content/uploads/2021/09/AIR-OPERATED-diaphragm-pumps.pdf"
+                      download
+                      class="btn btn-outline-primary d-inline-flex align-items-center"
+                    >
+                      <i class="bi bi-download me-2"></i> Download Brochure
+                    </a>
+                  </div>
+                </div>
               </div>
+            </div>
           </div>
         </div>
       </div>
+    </section>
 
-      
-    </div>
+    <!-- Have Any QUERIES? -->
+    <section class="neeq-section">
+      <div class="container">
+        <div class="row align-items-start">
+          <!-- Left copy -->
+          <div class="col-lg-6">
+            <div class="neeq-eyebrow">We’ re here to help you</div>
+            <div class="neeq-rule" aria-hidden="true"></div>
+            <h1 class="neeq-title fw-medium">
+              <span class="neeq-bold">HAVE</span> ANY<br />QUERIES?
+            </h1>
+            <p class="neeq-copy">
+              Our team is here to help. Reach out to us for product details,
+              technical support, or customized solutions — we’ll get back to you
+              quickly.
+            </p>
+          </div>
 
-  </div>
-</section>
+          <!-- Right form -->
+          <div class="col-lg-6">
+            <form class="neeq-form" action="#" method="post">
+              <div class="mb-3">
+                <label for="neeq-name" class="form-label">Name</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="neeq-name"
+                  name="name"
+                  placeholder="Enter Your Name"
+                  required
+                />
+              </div>
 
-<!-- Have Any QUERIES? -->
-<section class="neeq-section">
-  <div class="container">
-    <div class="row  align-items-start">
-      <!-- Left copy -->
-      <div class="col-lg-6">
-        <div class="neeq-eyebrow">We’ re here to help you</div>
-        <div class="neeq-rule" aria-hidden="true"></div>
-        <h1 class="neeq-title fw-medium">
-          <span class="neeq-bold">HAVE</span> ANY<br>QUERIES?
-        </h1>
-        <p class="neeq-copy">
-          Our team is here to help. Reach out to us for product details, technical support,
-          or customized solutions — we’ll get back to you quickly.
+              <div class="mb-3">
+                <label for="neeq-phone" class="form-label">Phone Number</label>
+                <input
+                  type="tel"
+                  class="form-control"
+                  id="neeq-phone"
+                  name="phone"
+                  placeholder="Enter your Phone Number"
+                />
+              </div>
+
+              <div class="mb-3">
+                <label for="neeq-email" class="form-label">E-Mail</label>
+                <input
+                  type="email"
+                  class="form-control"
+                  id="neeq-email"
+                  name="email"
+                  placeholder="Enter your Mail"
+                  required
+                />
+              </div>
+
+              <div class="mb-3">
+                <label for="neeq-whatsapp" class="form-label"
+                  >What’s App Number</label
+                >
+                <input
+                  type="tel"
+                  class="form-control"
+                  id="neeq-whatsapp"
+                  name="whatsapp"
+                  placeholder="Enter your What’s App Number"
+                />
+              </div>
+
+              <div class="mb-4">
+                <label for="neeq-company" class="form-label"
+                  >Company Name</label
+                >
+                <input
+                  type="text"
+                  class="form-control"
+                  id="neeq-company"
+                  name="company"
+                  placeholder="Enter your Company Name"
+                />
+              </div>
+
+              <button type="submit" class="btn neeq-btn">Submit</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Review Our Product -->
+    <section style="background-color: #cb6725; color: #fff; padding: 20px">
+      <div class="container text-center">
+        <h2 class="fw-semibold mt-4 text-light text-start text-md-center">
+          Review Our Product
+        </h2>
+        <p class="mt-4 text-start text-md-center">
+          Share your experience and feedback to help us improve and serve you
+          better with reliable, high-performance solutions.
         </p>
+        <a href="#"
+          ><button type="button" class="mt-3 mb-2 Review-btn text-center">
+            Submit
+          </button></a
+        >
       </div>
+    </section>
 
-      <!-- Right form -->
-      <div class="col-lg-6">
-        <form class="neeq-form" action="#" method="post">
-          <div class="mb-3">
-            <label for="neeq-name" class="form-label">Name</label>
-            <input type="text" class="form-control" id="neeq-name" name="name" placeholder="Enter Your Name" required>
+    <!-- Sign Up Now -->
+    <section class="mt-5">
+      <h1 class="text-center">Sign Up Now</h1>
+      <p class="text-center">
+        To get regular updates about<br />latest offers and product launches!
+      </p>
+
+      <div class="container" style="font-family: 'Lato'">
+        <center>
+          <div class="d-flex text-align-center justify-content-between sign-up">
+            <input
+              type="email"
+              id="emailInput"
+              placeholder="Enter Your Email"
+              style="padding: 8px; border: none; border-radius: 5px; width: 55%"
+            />
+            <button class="signup-btn text-dark" onclick="validateForm()">
+              Submit
+            </button>
           </div>
 
-          <div class="mb-3">
-            <label for="neeq-phone" class="form-label">Phone Number</label>
-            <input type="tel" class="form-control" id="neeq-phone" name="phone" placeholder="Enter your Phone Number">
+          <div
+            class="gdpr-check justify-content-md-center justify-content-start"
+          >
+            <input type="checkbox" id="gdpr" />
+            <label for="gdpr">Accept GDPR Terms</label>
           </div>
-
-          <div class="mb-3">
-            <label for="neeq-email" class="form-label">E-Mail</label>
-            <input type="email" class="form-control" id="neeq-email" name="email" placeholder="Enter your Mail" required>
-          </div>
-
-          <div class="mb-3">
-            <label for="neeq-whatsapp" class="form-label">What’s App Number</label>
-            <input type="tel" class="form-control" id="neeq-whatsapp" name="whatsapp" placeholder="Enter your What’s App Number">
-          </div>
-
-          <div class="mb-4">
-            <label for="neeq-company" class="form-label">Company Name</label>
-            <input type="text" class="form-control" id="neeq-company" name="company" placeholder="Enter your Company Name">
-          </div>
-
-          <button type="submit" class="btn neeq-btn">Submit</button>
-        </form>
+        </center>
       </div>
-    </div>
-  </div>
-</section>
+    </section>
 
-
-<!-- Review Our Product -->
- <section style="background-color: #CB6725;color: #fff;padding: 20px;">
-    <div class="container text-center">
-        <h2 class="fw-semibold mt-4 text-light text-start text-md-center">Review Our Product</h2>
-        <p class="mt-4  text-start text-md-center">Share your experience and feedback to help us improve and serve you better with reliable, high-performance solutions.</p>
-        <a href="#"><button type="button" class="mt-3 mb-2 Review-btn  text-center">Submit</button></a>
-    </div>
- </section>
-
-<!-- Sign Up Now -->
-<section class="mt-5 ">
-  <h1 class="text-center">Sign Up Now</h1>
-  <p class="text-center">To get regular updates about<br>latest offers and product launches!</p>
-
-  <div class="container" style="font-family: 'Lato';">
-    <center>
-      <div class="d-flex text-align-center justify-content-between sign-up">
-        <input type="email" id="emailInput" placeholder="Enter Your Email" style="padding:8px; border:none; border-radius:5px; width: 55%;">
-        <button class="signup-btn text-dark" onclick="validateForm()">Submit</button>
-      </div>
-
-      <div class="gdpr-check justify-content-md-center justify-content-start">
-        <input type="checkbox" id="gdpr">
-        <label for="gdpr">Accept GDPR Terms</label>
-      </div>
-    </center>
-  </div>
-</section>
-
-<!-- Footer Section -->
-<footer class="">
-  <div class="container">
-    <div class="row">
-      <div class="col-8 col-md-3 col-lg-3">
-        <img style="box-shadow: 0px 5px 10px rgba(23, 23, 23,0.3);" src="Images/f-logo.png" alt="Logo" class="img-fluid w-50" srcset="">
-      </div>
-      <div class="col-6 col-md-5 col-lg-3 ">
-        <p>SiteMap</p>
-        <ul class="sitemap-ul">
-          <li>About</li>
-          <li>Contact Us</li>
-          <li>Bank Details</li>
-          
-        </ul>
-      </div>
-      <div class="col-6 col-md-4 col-lg-3">
-        <p>Our Service</p>
-        <ul class="sitemap-ul">
-          <li>Service Request</li>
-          <li>Enquiry</li>
-          <li>Detailed Enquiry</li>
-
-        </ul>
-      </div>
-      <div class="col-12 col-md-6 col-lg-3">
-        <p>Contact Information</p>
-        <div>
-          <div class="d-flex ">
-            <img src="Images/pin-01.png" width="22px" class="mt-2 me-2" height="22px" alt="Pin">
-            <p >No.96-A, TTK Road,, Alwarpet, Chennai, Tamil Nadu 600018,INDIA.</p>
+    <!-- Footer Section -->
+    <footer class="">
+      <div class="container">
+        <div class="row">
+          <div class="col-8 col-md-3 col-lg-3">
+            <img
+              style="box-shadow: 0px 5px 10px rgba(23, 23, 23, 0.3)"
+              src="Images/f-logo.png"
+              alt="Logo"
+              class="img-fluid w-50"
+              srcset=""
+            />
           </div>
+          <div class="col-6 col-md-5 col-lg-3">
+            <p>SiteMap</p>
+            <ul class="sitemap-ul">
+              <li>About</li>
+              <li>Contact Us</li>
+              <li>Bank Details</li>
+            </ul>
+          </div>
+          <div class="col-6 col-md-4 col-lg-3">
+            <p>Our Service</p>
+            <ul class="sitemap-ul">
+              <li>Service Request</li>
+              <li>Enquiry</li>
+              <li>Detailed Enquiry</li>
+            </ul>
+          </div>
+          <div class="col-12 col-md-6 col-lg-3">
+            <p>Contact Information</p>
+            <div>
+              <div class="d-flex">
+                <img
+                  src="Images/pin-01.png"
+                  width="22px"
+                  class="mt-2 me-2"
+                  height="22px"
+                  alt="Pin"
+                />
+                <p>
+                  No.96-A, TTK Road,, Alwarpet, Chennai, Tamil Nadu
+                  600018,INDIA.
+                </p>
+              </div>
 
-          <div class="d-flex ">
-            <img src="Images/phone.png" width="22px" class="mt-2 me-2" height="22px" alt="Phone">
-            <p class="pt-1">+91-44-4301 2183 OR <br> +91-7200627289</p>
-          </div>
-          <div class="d-flex ">
-            <img src="Images/mail-01.png" width="22px" class="mt-2 me-2" height="22px" alt="Mail">
-            <p class="pt-1">sales@neweraengineers.com</p>
-          </div>
-          <div class="d-flex ">
-            <img src="Images/clock.png" width="22px" class="mt-2 me-2" height="22px" alt="Clock">
-            <p class="pt-1">Mon - Fri / 10:00 AM - 5:00 PM</p>
+              <div class="d-flex">
+                <img
+                  src="Images/phone.png"
+                  width="22px"
+                  class="mt-2 me-2"
+                  height="22px"
+                  alt="Phone"
+                />
+                <p class="pt-1">
+                  +91-44-4301 2183 OR <br />
+                  +91-7200627289
+                </p>
+              </div>
+              <div class="d-flex">
+                <img
+                  src="Images/mail-01.png"
+                  width="22px"
+                  class="mt-2 me-2"
+                  height="22px"
+                  alt="Mail"
+                />
+                <p class="pt-1">sales@neweraengineers.com</p>
+              </div>
+              <div class="d-flex">
+                <img
+                  src="Images/clock.png"
+                  width="22px"
+                  class="mt-2 me-2"
+                  height="22px"
+                  alt="Clock"
+                />
+                <p class="pt-1">Mon - Fri / 10:00 AM - 5:00 PM</p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  </div>
-  
-<div class="container-fluid Copyright">
-    <div class="container d-md-flex justify-content-evenly">
-      <p class="text-md-center text-start">© Copyright – new era engineers & Traders</p>
-      <div>
-        <img src="Images/Facebook.png" class="img-fluid" alt="Facebook">
-        <img src="Images/Instagram.png" class="img-fluid" alt="Instagram">
-        <img src="Images/LinkedIn.png" class="img-fluid" alt="LinkedIn">
-        <img src="Images/Whatsapp.png" class="img-fluid" alt="Whatsapp">
+
+      <div class="container-fluid Copyright">
+        <div class="container d-md-flex justify-content-evenly">
+          <p class="text-md-center text-start">
+            © Copyright – new era engineers & Traders
+          </p>
+          <div>
+            <img src="Images/Facebook.png" class="img-fluid" alt="Facebook" />
+            <img src="Images/Instagram.png" class="img-fluid" alt="Instagram" />
+            <img src="Images/LinkedIn.png" class="img-fluid" alt="LinkedIn" />
+            <img src="Images/Whatsapp.png" class="img-fluid" alt="Whatsapp" />
+          </div>
+          <p>Terms & Conditions | Privacy Policy</p>
+        </div>
       </div>
-      <p>Terms & Conditions | Privacy Policy</p>
-    </div>
-</div>
-</footer>
-<script src="js/Animation-Script.js"></script>
-<script src="js/Progressbar.js"></script> 
-<script src="js/Header.js"></script> 
-<script src="js/sign-up.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    </footer>
+    <script src="js/Animation-Script.js"></script>
+    <script src="js/Progressbar.js"></script>
+    <script src="js/Header.js"></script>
+    <script src="js/sign-up.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
 
-<!--UP-ARROW JavaScript -->
-<script>
-  const scrollBtn = document.getElementById('scrollTopBtn');
+    <!--UP-ARROW JavaScript -->
+    <script>
+      const scrollBtn = document.getElementById("scrollTopBtn");
 
-  // Show button after scrolling down 100px
-  window.onscroll = function() {
-    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-      scrollBtn.style.display = "block";
-    } else {
+      // Show button after scrolling down 100px
+      window.onscroll = function () {
+        if (
+          document.body.scrollTop > 100 ||
+          document.documentElement.scrollTop > 100
+        ) {
+          scrollBtn.style.display = "block";
+        } else {
+          scrollBtn.style.display = "none";
+        }
+      };
+
+      // Scroll to top when clicked
+      scrollBtn.addEventListener("click", () => {
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth",
+        });
+      });
+
+      // Hide initially
       scrollBtn.style.display = "none";
-    }
-  };
+    </script>
 
-  // Scroll to top when clicked
-  scrollBtn.addEventListener('click', () => {
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth'
-    });
-  });
+    <!-- Footer Stays bottom script -->
+    <script>
+      (function () {
+        function adjustFooter() {
+          const footer = document.querySelector("footer");
+          if (!footer) return;
 
-  // Hide initially
-  scrollBtn.style.display = "none";
-</script>
+          const bodyHeight = document.body.offsetHeight;
+          const windowHeight = window.innerHeight;
 
+          if (bodyHeight < windowHeight) {
+            footer.style.position = "absolute";
+            footer.style.bottom = "0";
+            footer.style.width = "100%";
+          } else {
+            footer.style.position = "static";
+          }
+        }
 
+        window.addEventListener("load", adjustFooter);
+        window.addEventListener("resize", adjustFooter);
+      })();
+    </script>
 
-
-<!-- Footer Stays bottom script -->
-<script>
-  (function() {
-  function adjustFooter() {
-    const footer = document.querySelector('footer');
-    if (!footer) return;
-
-    const bodyHeight = document.body.offsetHeight;
-    const windowHeight = window.innerHeight;
-
-    if (bodyHeight < windowHeight) {
-      footer.style.position = 'absolute';
-      footer.style.bottom = '0';
-      footer.style.width = '100%';
-    } else {
-      footer.style.position = 'static';
-    }
-  }
-
-  window.addEventListener('load', adjustFooter);
-  window.addEventListener('resize', adjustFooter);
-})();
-
-</script>
-
-<!-- submit-form-script -->
-<script>
-  // demo: prevent actual submit while you style
-  document.querySelector('.neeq-form')?.addEventListener('submit', (e)=>{
-    e.preventDefault();
-    alert('Submitted!');
-  });
-</script>
-</body>
+    <!-- submit-form-script -->
+    <script>
+      // demo: prevent actual submit while you style
+      document.querySelector(".neeq-form")?.addEventListener("submit", (e) => {
+        e.preventDefault();
+        alert("Submitted!");
+      });
+    </script>
+  </body>
 </html>

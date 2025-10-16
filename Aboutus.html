@@ -1,262 +1,545 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>About us</title>
-    <link rel="icon" href="Images/Group.svg">
-    <link rel="stylesheet" href="style.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet"> 
-    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
-
-</head>
-<body>
-  <!-- Scroll Progress Bar -->
-<div id="scroll-progress"></div>
-<!-- HTML: Sticky Scroll-to-Top Icon -->
-<div class="scroll-top" id="scrollTopBtn">
-  &#8679; <!-- Up arrow icon -->
-</div>
-  <!-- Header -->
-  <header class="ne-header sticky-top animate-item ">
-    <div class="container d-flex align-items-center justify-content-between">
-      
-      <!-- Logo -->
-      <div class="ne-logo">
-        <img src="Images/logo.png" alt="New Era Logo">
-      </div>
-
-      <!-- Navigation (Desktop) -->
-      <nav class="ne-nav d-none d-lg-block">
-        <ul>
-          <li><a href="index.html" class="ne-link ">Home</a></li>
-          <li><a href="Aboutus.html" class="ne-link ne-active">About Us</a></li>
-          <li><a href="products.html" class="ne-link">Products</a></li>
-          <li><a href="#" class="ne-link">Industries</a></li>
-          <li><a href="#" class="ne-link">Enquiry</a></li>
-          <li><a href="#" class="ne-link">Service</a></li>
-          <li><a href="#" class="ne-link">Contact Us</a></li>
-          <li><a href="#" class="ne-link">Bank &amp; Statutory</a></li>
-        </ul>
-      </nav>
-
-      <!-- Right Section -->
-      <div class="d-flex align-items-center">
-        <button class="ne-toggle d-lg-none"><i class="bi bi-list"></i></button>
-        <div class="ne-search-icon"><i class="bi bi-search"></i></div>
-      </div>
+    <link rel="icon" href="Images/Group.svg" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Scroll Progress Bar -->
+    <div id="scroll-progress"></div>
+    <!-- HTML: Sticky Scroll-to-Top Icon -->
+    <div class="scroll-top" id="scrollTopBtn">
+      &#8679;
+      <!-- Up arrow icon -->
     </div>
+    <!-- Header -->
+    <!-- Header -->
+    <header class="ne-header sticky-top ">
+      <div class="container">
+        <!-- ===== HEADER ===== -->
+        <nav class="navbar navbar-expand-lg navbar-light sticky-top">
+          <div class="container-fluid">
+            <!-- Left: Brand -->
+            <a class="navbar-brand" href="#">
+              <img src="Images/logo.png" alt="New Era Engineers Logo" />
+            </a>
 
-    <!-- Mobile Menu -->
-    <div class="ne-mobile-nav" id="neMobileNav">
-      <ul>
-        <li><a href="index.html" class="ne-link ">Home</a></li>
-        <li><a href="Aboutus.html" class="ne-link ne-active">About Us</a></li>
-        <li><a href="products.html" class="ne-link">Products</a></li>
-        <li><a href="#" class="ne-link">Industries</a></li>
-        <li><a href="#" class="ne-link">Enquiry</a></li>
-        <li><a href="#" class="ne-link">Service</a></li>
-        <li><a href="#" class="ne-link">Contact Us</a></li>
-        <li><a href="#" class="ne-link">Bank &amp; Statutory</a></li>
-      </ul>
-      
-    </div>
+            <!-- Right (SM/TAB): [hamburger][search] like your screenshot -->
+            <div class="d-flex align-items-center ms-auto d-lg-none">
+              <!-- Hamburger toggles collapse -->
+              <button
+                class="navbar-toggler icon-btn"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarNavDropdown"
+                aria-controls="navbarNavDropdown"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+              >
+                <!-- Use icon instead of default toggler bars -->
+                <i class="bi bi-list icon-size"></i>
+              </button>
+              <!-- Search icon immediately AFTER hamburger -->
+              <button
+                id="neSearchToggleMobile"
+                class="btn btn-link icon-btn icon-gap"
+                type="button"
+                aria-expanded="false"
+                aria-controls="neSearchBox"
+              >
+                <i class="bi bi-search icon-size"></i>
+              </button>
+            </div>
 
-    <!-- Search Box -->
-    <div class="ne-search-box" id="neSearchBox">
-      <div class="container text-center">
-        <input type="text" placeholder="Search here...">
+            <!-- Collapsible nav -->
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+              <ul class="navbar-nav ms-auto align-items-lg-center">
+                <li class="nav-item">
+                  <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link ne-active" href="Aboutus.html">About Us</a>
+                </li>
+
+                <!-- PRODUCTS DROPDOWN -->
+                <li class="nav-item dropdown position-static">
+                  <a
+                    class="nav-link dropdown-toggle d-flex align-items-center gap-1"
+                    href="#"
+                    id="productsDropdown"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    Products
+                    <i
+                      class="bi bi-chevron-down small"
+                      style="font-size: 0.75rem"
+                    ></i>
+                  </a>
+
+                  <div
+                    class="dropdown-menu mega-menu"
+                    aria-labelledby="productsDropdown"
+                  >
+                    <div class="row">
+                      <div class="col-lg-2 col-md-4">
+                        <h6>100% Leakproof Sealless Pumps</h6>
+                        <a href="products.html">Air Operated Diaphragm Pumps</a>
+                        <a href="#"
+                          >Chemical Thermoplastic Pumps - Vertical Glandless</a
+                        >
+                        <a href="#">Drum/Barrel/Carboy Pumps</a>
+                        <a href="#">Thermoplastic Magnetic Drive Pumps</a>
+                        <a href="#">Metallic Magnetic Drive Pumps</a>
+                      </div>
+
+                      <div class="col-lg-2 col-md-4">
+                        <h6>Centrifugal Pumps</h6>
+                        <a href="#">Chemical Metallic Process Pumps</a>
+                        <a href="#">Chemical Thermoplastic Horizontal Pumps</a>
+                        <a href="#">FDA - Centrifugal Sanitary Pumps</a>
+                        <a href="#">Horizontal and Vertical Multistage Pumps</a>
+                        <a href="#">Non-Clog Horizontal Self Priming Pumps</a>
+                        <a href="#">Non-Clog Vertical Submersible Pumps</a>
+                      </div>
+
+                      <div class="col-lg-2 col-md-4">
+                        <h6>Positive Displacement Pumps</h6>
+                        <a href="#">AODD Sanitary Pumps</a>
+                        <a href="#">Dosing & Metering Pumps</a>
+                        <a href="#">External Gear Pumps</a>
+                        <a href="#">Hose / Peristaltic Pumps</a>
+                        <a href="#">Internal Gear Pumps</a>
+                        <a href="#">Rotary Lobe Pumps</a>
+                        <a href="#">Screw Pumps</a>
+                      </div>
+
+                      <div class="col-lg-2 col-md-4">
+                        <h6>Motors</h6>
+                        <a href="#">Crane and Hoist Duty Motors</a>
+                        <a href="#">DC Motors</a>
+                        <a href="#">Explosion-Proof / Flameproof Motors</a>
+                        <a href="#">Helical Geared Motors</a>
+                        <a href="#">Squirrel Cage Motors</a>
+                      </div>
+
+                      <div class="col-lg-2 col-md-4">
+                        <h6>Gear Boxes</h6>
+                        <a href="#">Helical Gear Boxes</a>
+                        <a href="#">Worm Gear Boxes</a>
+                      </div>
+
+                      <div class="col-lg-2 col-md-4">
+                        <h6>Level Controllers</h6>
+                        <a href="#">Water Switch Controls</a>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+
+                <!-- INDUSTRIES DROPDOWN -->
+                <li class="nav-item dropdown position-static">
+                  <a
+                    class="nav-link dropdown-toggle d-flex align-items-center gap-1"
+                    href="#"
+                    id="industriesDropdown"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    Industries
+                    <i
+                      class="bi bi-chevron-down small"
+                      style="font-size: 0.75rem"
+                    ></i>
+                  </a>
+
+                  <div
+                    class="dropdown-menu mega-menu"
+                    aria-labelledby="industriesDropdown"
+                  >
+                    <div class="row g-0">
+                      <div class="col-lg-2 col-md-4">
+                        <a href="#" class="dropdown-item fw-semibold"
+                          >Automobile Industry</a
+                        >
+                      </div>
+                      <div class="col-lg-3 col-md-4">
+                        <a href="#" class="dropdown-item fw-semibold">
+                          Chemical and Pharmaceutical Industry
+                        </a>
+                      </div>
+                      <div class="col-lg-2 col-md-4">
+                        <a href="#" class="dropdown-item fw-semibold"
+                          >Electroplating Industry</a
+                        >
+                      </div>
+                      <div class="col-lg-2 col-md-4">
+                        <a href="#" class="dropdown-item fw-semibold"
+                          >Food and Beverage Industry</a
+                        >
+                      </div>
+                      <div class="col-lg-3 col-md-4">
+                        <a href="#" class="dropdown-item fw-semibold"
+                          >Wastewater Treatment Industry</a
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </li>
+
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Enquiry</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Service</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Contact Us</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Bank & Statutory</a>
+                </li>
+
+                <!-- Desktop search icon at far right -->
+                <li class="nav-item ms-lg-2 d-none d-lg-block">
+                  <button
+                    id="neSearchToggle"
+                    class="btn btn-link nav-link p-0 icon-btn"
+                    type="button"
+                    aria-expanded="false"
+                    aria-controls="neSearchBox"
+                  >
+                    <i class="bi bi-search" style="font-size: 1.1rem"></i>
+                  </button>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+
+        <!-- Slide-down Search -->
+        <div class="search-box" id="neSearchBox">
+          <div class="inner text-center">
+            <input
+              id="neSearchInput"
+              class="search-input"
+              type="text"
+              placeholder="Search products, pumps, motors..."
+            />
+          </div>
+        </div>
       </div>
-    </div>
-
-  </header>
-
+    </header>
 
     <!-- Banner Section -->
     <!-- Desktop Banner -->
-<section class="banner-section d-none d-md-block animate-item">
-  <div class="container-fluid p-0">
-    <img src="Images/web-banner-new-era.jpg" alt="Banner Image" class="img-fluid banner-img w-100">
-  </div>
-</section>
-
-<!-- Mobile Banner -->
-<section class="banner-section  d-block d-md-none animate-item">
-  <div class="container p-0">
-    <img src="Images/web-banner-mobile.jpg" alt="Banner Image" class="img-fluid banner-img w-100">
-  </div>
-</section>
-
-
-<section class="mt-5 mb-5 animate-item">
-    <div class="container" style="background-color: #CA661B;padding: 20px 15px;border-radius: 20px;">
-        <div class="container" style="border: 1px solid #fff;border-radius: 20px;">
-            <div class="row">
-                <div class="col-12 col-lg-6">
-                    <img src="Images/about-person-ing.png" class="img-fluid" alt="">
-                </div>
-                <div class="col-12 col-lg-6 text-start pt-4"  >
-                    <h3 class="fw-bold text-light pb-4">Message From The Managing Partner</h3>
-                    <p class="text-light pb-4">Mr. Kapish S Desai, the Managing Partner of the firm, has graduated with a B.A Corporate degree and has over three decades of experience in the Pumping Industry handling various international brands.</p>
-                    <p class="text-light pb-4">Mr. Desai has been associated with the firm since its early stage as a promoter, he is responsible for the overall working of the firm and is instrumental in making strategic decisions for the firm.</p>
-                    <p class="text-light ">Mr. Desai continuously invests in enriching his business knowledge not only through his active involvement in the company but also by the vast knowledge of his industry and the upcoming product technologies.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Built on Trust & Innovation -->
- <section class="animate-item">
-    <div class="container pb-5">
-        <h1 class="text-center fw-semibold pb-5" style="text-decoration: 3px  underline #CA661B;">Built on Trust & Innovation</h1>
-        <p class="text-start text-md-center" style="color: #CA661B;">Founded in 1956 by Mr.S.M.Desai, New Era Group has grown to be a leading pump specialist company in the southern India today. An expert in pumping technology, the company is one of the top few pump distributors in India that distributes reputable and leading brands and has reacted to high demand for trendsetting pumps and systems with a carefully crafted growth strategy.</p>
-    </div>
- </section>
-
- <!-- Comprehensive Power & Motion Solutions -->
-<section style="background-color: #EBEBEB;" class="mb-5 animate-item">
-    <div class="container p-4">
-        <h1 class="text-center fw-semibold pb-4">Comprehensive Power & Motion Solutions</h1>
-        <div class="row" >
-            <div class="col-6 col-lg-3 ">
-                <img src="Images/1-a.svg" class="img-fluid About-Motion-Solutions" alt="Pump">
-            </div>
-            <div class="col-6 col-lg-3 ">
-                <img src="Images/2-a.svg" alt="Gearbox" class="img-fluid About-Motion-Solutions">
-            </div>
-            <div class="col-6 col-lg-3 ">
-                <img src="Images/3-a.svg" alt="Electric Motors" class="img-fluid About-Motion-Solutions">
-            </div>
-            <div class="col-6 col-lg-3 ">
-                <img src="Images/4-a.svg" alt="Water Switches" class="img-fluid About-Motion-Solutions">
-            </div>
-        </div>
-    </div>
-</section>
-<!-- Footer Section -->
-<footer class="animate-item">
-  <div class="container">
-    <div class="row">
-      <div class="col-8 col-md-3 col-lg-3">
-        <img style="box-shadow: 0px 5px 10px rgba(23, 23, 23,0.3);" src="Images/f-logo.png" alt="Logo" class="img-fluid w-50" srcset="">
+    <section class="banner-section d-none d-md-block animate-item">
+      <div class="container-fluid p-0">
+        <img
+          src="Images/web-banner-new-era.jpg"
+          alt="Banner Image"
+          class="img-fluid banner-img w-100"
+        />
       </div>
-      <div class="col-6 col-md-5 col-lg-3 ">
-        <p>SiteMap</p>
-        <ul class="sitemap-ul">
-          <li>About</li>
-          <li>Contact Us</li>
-          <li>Bank Details</li>
-          
-        </ul>
-      </div>
-      <div class="col-6 col-md-4 col-lg-3">
-        <p>Our Service</p>
-        <ul class="sitemap-ul">
-          <li>Service Request</li>
-          <li>Enquiry</li>
-          <li>Detailed Enquiry</li>
+    </section>
 
-        </ul>
+    <!-- Mobile Banner -->
+    <section class="banner-section d-block d-md-none animate-item">
+      <div class="container p-0">
+        <img
+          src="Images/web-banner-mobile.jpg"
+          alt="Banner Image"
+          class="img-fluid banner-img w-100"
+        />
       </div>
-      <div class="col-12 col-md-6 col-lg-3">
-        <p>Contact Information</p>
-        <div>
-          <div class="d-flex ">
-            <img src="Images/pin-01.png" width="22px" class="mt-2 me-2" height="22px" alt="Pin">
-            <p >No.96-A, TTK Road,, Alwarpet, Chennai, Tamil Nadu 600018,INDIA.</p>
-          </div>
+    </section>
 
-          <div class="d-flex ">
-            <img src="Images/phone.png" width="22px" class="mt-2 me-2" height="22px" alt="Phone">
-            <p class="pt-1">+91-44-4301 2183 OR <br> +91-7200627289</p>
-          </div>
-          <div class="d-flex ">
-            <img src="Images/mail-01.png" width="22px" class="mt-2 me-2" height="22px" alt="Mail">
-            <p class="pt-1">sales@neweraengineers.com</p>
-          </div>
-          <div class="d-flex ">
-            <img src="Images/clock.png" width="22px" class="mt-2 me-2" height="22px" alt="Clock">
-            <p class="pt-1">Mon - Fri / 10:00 AM - 5:00 PM</p>
+    <section class="mt-5 mb-5 animate-item">
+      <div
+        class="container"
+        style="
+          background-color: #ca661b;
+          padding: 20px 15px;
+          border-radius: 20px;
+        "
+      >
+        <div
+          class="container"
+          style="border: 1px solid #fff; border-radius: 20px"
+        >
+          <div class="row">
+            <div class="col-12 col-lg-6">
+              <img src="Images/about-person-ing.png" class="img-fluid" alt="" />
+            </div>
+            <div class="col-12 col-lg-6 text-start pt-4">
+              <h3 class="fw-bold text-light pb-4">
+                Message From The Managing Partner
+              </h3>
+              <p class="text-light pb-4">
+                Mr. Kapish S Desai, the Managing Partner of the firm, has
+                graduated with a B.A Corporate degree and has over three decades
+                of experience in the Pumping Industry handling various
+                international brands.
+              </p>
+              <p class="text-light pb-4">
+                Mr. Desai has been associated with the firm since its early
+                stage as a promoter, he is responsible for the overall working
+                of the firm and is instrumental in making strategic decisions
+                for the firm.
+              </p>
+              <p class="text-light">
+                Mr. Desai continuously invests in enriching his business
+                knowledge not only through his active involvement in the company
+                but also by the vast knowledge of his industry and the upcoming
+                product technologies.
+              </p>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  </div>
-  
-<div class="container-fluid Copyright">
-    <div class="container d-md-flex justify-content-evenly">
-      <p class="text-md-center text-start">© Copyright – new era engineers & Traders</p>
-      <div>
-        <img src="Images/Facebook.png" class="img-fluid" alt="Facebook">
-        <img src="Images/Instagram.png" class="img-fluid" alt="Instagram">
-        <img src="Images/LinkedIn.png" class="img-fluid" alt="LinkedIn">
-        <img src="Images/Whatsapp.png" class="img-fluid" alt="Whatsapp">
+    </section>
+
+    <!-- Built on Trust & Innovation -->
+    <section class="animate-item">
+      <div class="container pb-5">
+        <h1
+          class="text-center fw-semibold pb-5"
+          style="text-decoration: 3px underline #ca661b"
+        >
+          Built on Trust & Innovation
+        </h1>
+        <p class="text-start text-md-center" style="color: #ca661b">
+          Founded in 1956 by Mr.S.M.Desai, New Era Group has grown to be a
+          leading pump specialist company in the southern India today. An expert
+          in pumping technology, the company is one of the top few pump
+          distributors in India that distributes reputable and leading brands
+          and has reacted to high demand for trendsetting pumps and systems with
+          a carefully crafted growth strategy.
+        </p>
       </div>
-      <p>Terms & Conditions | Privacy Policy</p>
-    </div>
-</div>
-</footer>
-<script src="js/Progressbar.js"></script> 
-<script src="js/Header.js"></script> 
-<script src="js/Animation-Script.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    </section>
 
-<!--UP-ARROW JavaScript -->
-<script>
-  const scrollBtn = document.getElementById('scrollTopBtn');
+    <!-- Comprehensive Power & Motion Solutions -->
+    <section style="background-color: #ebebeb" class="mb-5 animate-item">
+      <div class="container p-4">
+        <h1 class="text-center fw-semibold pb-4">
+          Comprehensive Power & Motion Solutions
+        </h1>
+        <div class="row">
+          <div class="col-6 col-lg-3">
+            <img
+              src="Images/1-a.svg"
+              class="img-fluid About-Motion-Solutions"
+              alt="Pump"
+            />
+          </div>
+          <div class="col-6 col-lg-3">
+            <img
+              src="Images/2-a.svg"
+              alt="Gearbox"
+              class="img-fluid About-Motion-Solutions"
+            />
+          </div>
+          <div class="col-6 col-lg-3">
+            <img
+              src="Images/3-a.svg"
+              alt="Electric Motors"
+              class="img-fluid About-Motion-Solutions"
+            />
+          </div>
+          <div class="col-6 col-lg-3">
+            <img
+              src="Images/4-a.svg"
+              alt="Water Switches"
+              class="img-fluid About-Motion-Solutions"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Footer Section -->
+    <footer class="animate-item">
+      <div class="container">
+        <div class="row">
+          <div class="col-8 col-md-3 col-lg-3">
+            <img
+              style="box-shadow: 0px 5px 10px rgba(23, 23, 23, 0.3)"
+              src="Images/f-logo.png"
+              alt="Logo"
+              class="img-fluid w-50"
+              srcset=""
+            />
+          </div>
+          <div class="col-6 col-md-5 col-lg-3">
+            <p>SiteMap</p>
+            <ul class="sitemap-ul">
+              <li>About</li>
+              <li>Contact Us</li>
+              <li>Bank Details</li>
+            </ul>
+          </div>
+          <div class="col-6 col-md-4 col-lg-3">
+            <p>Our Service</p>
+            <ul class="sitemap-ul">
+              <li>Service Request</li>
+              <li>Enquiry</li>
+              <li>Detailed Enquiry</li>
+            </ul>
+          </div>
+          <div class="col-12 col-md-6 col-lg-3">
+            <p>Contact Information</p>
+            <div>
+              <div class="d-flex">
+                <img
+                  src="Images/pin-01.png"
+                  width="22px"
+                  class="mt-2 me-2"
+                  height="22px"
+                  alt="Pin"
+                />
+                <p>
+                  No.96-A, TTK Road,, Alwarpet, Chennai, Tamil Nadu
+                  600018,INDIA.
+                </p>
+              </div>
 
-  // Show button after scrolling down 100px
-  window.onscroll = function() {
-    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-      scrollBtn.style.display = "block";
-    } else {
+              <div class="d-flex">
+                <img
+                  src="Images/phone.png"
+                  width="22px"
+                  class="mt-2 me-2"
+                  height="22px"
+                  alt="Phone"
+                />
+                <p class="pt-1">
+                  +91-44-4301 2183 OR <br />
+                  +91-7200627289
+                </p>
+              </div>
+              <div class="d-flex">
+                <img
+                  src="Images/mail-01.png"
+                  width="22px"
+                  class="mt-2 me-2"
+                  height="22px"
+                  alt="Mail"
+                />
+                <p class="pt-1">sales@neweraengineers.com</p>
+              </div>
+              <div class="d-flex">
+                <img
+                  src="Images/clock.png"
+                  width="22px"
+                  class="mt-2 me-2"
+                  height="22px"
+                  alt="Clock"
+                />
+                <p class="pt-1">Mon - Fri / 10:00 AM - 5:00 PM</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="container-fluid Copyright">
+        <div class="container d-md-flex justify-content-evenly">
+          <p class="text-md-center text-start">
+            © Copyright – new era engineers & Traders
+          </p>
+          <div>
+            <img src="Images/Facebook.png" class="img-fluid" alt="Facebook" />
+            <img src="Images/Instagram.png" class="img-fluid" alt="Instagram" />
+            <img src="Images/LinkedIn.png" class="img-fluid" alt="LinkedIn" />
+            <img src="Images/Whatsapp.png" class="img-fluid" alt="Whatsapp" />
+          </div>
+          <p>Terms & Conditions | Privacy Policy</p>
+        </div>
+      </div>
+    </footer>
+    <script src="js/Progressbar.js"></script>
+    <script src="js/Header.js"></script>
+    <script src="js/Animation-Script.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+
+    <!--UP-ARROW JavaScript -->
+    <script>
+      const scrollBtn = document.getElementById("scrollTopBtn");
+
+      // Show button after scrolling down 100px
+      window.onscroll = function () {
+        if (
+          document.body.scrollTop > 100 ||
+          document.documentElement.scrollTop > 100
+        ) {
+          scrollBtn.style.display = "block";
+        } else {
+          scrollBtn.style.display = "none";
+        }
+      };
+
+      // Scroll to top when clicked
+      scrollBtn.addEventListener("click", () => {
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth",
+        });
+      });
+
+      // Hide initially
       scrollBtn.style.display = "none";
-    }
-  };
+    </script>
 
-  // Scroll to top when clicked
-  scrollBtn.addEventListener('click', () => {
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth'
-    });
-  });
+    <!-- Footer Stays bottom script -->
+    <script>
+      (function () {
+        function adjustFooter() {
+          const footer = document.querySelector("footer");
+          if (!footer) return;
 
-  // Hide initially
-  scrollBtn.style.display = "none";
-</script>
+          const bodyHeight = document.body.offsetHeight;
+          const windowHeight = window.innerHeight;
 
+          if (bodyHeight < windowHeight) {
+            footer.style.position = "absolute";
+            footer.style.bottom = "0";
+            footer.style.width = "100%";
+          } else {
+            footer.style.position = "static";
+          }
+        }
 
-
-
-<!-- Footer Stays bottom script -->
-<script>
-  (function() {
-  function adjustFooter() {
-    const footer = document.querySelector('footer');
-    if (!footer) return;
-
-    const bodyHeight = document.body.offsetHeight;
-    const windowHeight = window.innerHeight;
-
-    if (bodyHeight < windowHeight) {
-      footer.style.position = 'absolute';
-      footer.style.bottom = '0';
-      footer.style.width = '100%';
-    } else {
-      footer.style.position = 'static';
-    }
-  }
-
-  window.addEventListener('load', adjustFooter);
-  window.addEventListener('resize', adjustFooter);
-})();
-
-</script>
-</body>
+        window.addEventListener("load", adjustFooter);
+        window.addEventListener("resize", adjustFooter);
+      })();
+    </script>
+  </body>
 </html>

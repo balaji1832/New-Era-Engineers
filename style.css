@@ -160,6 +160,7 @@
   }
 }
 
+
     .scroll-top {
     position: fixed;
     right: 20px;
@@ -204,7 +205,7 @@ p{
       display: flex;
       justify-content: center;
       align-items: center;
-      padding: 60px 20px;
+      padding: 30px 0px;
       width: 100%;
     }
 
@@ -212,7 +213,7 @@ p{
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       grid-template-rows: repeat(2, auto);
-      gap: 25px;
+      gap: 17px;
       max-width: 700px;
       width: 100%;
     }
@@ -228,6 +229,7 @@ p{
 
     .stat-card:hover {
       transform: translateY(-5px);
+      box-shadow: -10px 10px 15px rgb(33, 33, 33,0.2);
     }
 
     .stat-card.orange {
@@ -1016,5 +1018,19 @@ footer{
   .neeq-section {
     padding: 3rem 0 5rem;
   }
+}
+
+
+
+/* Industries */
+/* Automobile industries */
+.Product-image-automobile{
+  width: 85%;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.Product-image-automobile:hover{
+  transform: translateY(-10px);
+  box-shadow: 0 9px 10px rgba(0, 0, 0, 0.2);
 }
 

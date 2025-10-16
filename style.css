@@ -153,7 +153,7 @@
 
   /* bigger touch targets */
   .mega-menu .dropdown-item{
-    font-size: 15px;
+    font-size: 12px;
     line-height: 1.4;
     padding: .5rem 0;
     white-space: normal;
@@ -165,6 +165,20 @@
   color: #d24a22 !important;
 }
 
+/* Lock body when nav is open */
+body.nav-open {
+  overflow: hidden;                  /* Prevent background scroll */
+  overscroll-behavior: contain;      /* Prevent rubber-band effect on iOS */
+}
+
+/* Allow scroll inside the toggle menu */
+@media (max-width: 991.98px) {
+  .navbar .navbar-collapse.show {
+    max-height: calc(100vh - 64px);  /* 64px = approximate header height */
+    overflow-y: auto;                /* Enable scrolling inside the menu */
+    -webkit-overflow-scrolling: touch;
+  }
+}
 
 
     .scroll-top {

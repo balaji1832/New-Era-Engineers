@@ -160,6 +160,12 @@
   }
 }
 
+.dropdown-item:active {
+  background-color: transparent !important;
+  color: #d24a22 !important;
+}
+
+
 
     .scroll-top {
     position: fixed;

@@ -806,13 +806,14 @@ footer{
   opacity: 0;
   transform: translateY(40px);
   transition: all 1s ease;
+  will-change: opacity, transform;
 }
 
-/* When visible */
 .animate-item.visible {
   opacity: 1;
   transform: translateY(0);
 }
+
 
 
 /* About us  */
@@ -1046,7 +1047,7 @@ footer{
 }
 @media (max-width:425px){
   .App-fs{
-    font-size: 12px;
+    font-size: 13px;
     
   }
 }
@@ -1056,13 +1057,13 @@ footer{
 }
 @media (max-width:770px){
   .App-helical{
-    font-size: 10px;
+    font-size: 12px;
     
   }
 }
 @media (max-width:425px){
   .App-helical{
-    font-size: 9px;
+    font-size: 12px;
     
   }
 }

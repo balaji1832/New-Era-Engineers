@@ -188,7 +188,7 @@
                         >
                       </div>
                       <div class="col-lg-3 col-md-4">
-                        <a href="#" class="dropdown-item fw-semibold">
+                        <a href="Chemical-Pharmaceutical-Industry.html" class="dropdown-item fw-semibold">
                           Chemical and Pharmaceutical Industry
                         </a>
                       </div>
@@ -308,43 +308,75 @@
   </h1>
 
   <!-- Carousel for Mobile -->
-  <div id="productCarousel" class="carousel slide d-md-none" data-bs-ride="carousel">
-    <div class="carousel-inner">
-      <div class="carousel-item active">
-        <img src="Images/pro-1.svg" class="d-block w-100 img-fluid" alt="pump">
-      </div>
-      <div class="carousel-item">
-        <img src="Images/pro-1.svg" class="d-block w-100 img-fluid" alt="pump">
-      </div>
-      <div class="carousel-item">
-        <img src="Images/pro-1.svg" class="d-block w-100 img-fluid" alt="pump">
-      </div>
-      <div class="carousel-item">
-        <img src="Images/pro-1.svg" class="d-block w-100 img-fluid" alt="pump">
-      </div>
-      <div class="carousel-item">
-        <img src="Images/pro-1.svg" class="d-block w-100 img-fluid" alt="pump">
-      </div>
-      <div class="carousel-item">
-        <img src="Images/pro-1.svg" class="d-block w-100 img-fluid" alt="pump">
+  <!-- Carousel -->
+<div id="productCarousel" class="carousel slide d-lg-none" data-bs-ride="false">
+  <div class="carousel-inner">
+
+    <!-- Each item holds one column initially; JS will clone the next item to make 2-up on md+ -->
+    <div class="carousel-item active">
+      <div class="row g-0 justify-content-center">
+        <div class="col-12 col-md-6 d-flex">
+          <img src="Images/pro-1.svg" class="img-fluid w-100" alt="pump 1">
+        </div>
       </div>
     </div>
 
-    <!-- Controls -->
-    <button class="carousel-control-prev" type="button" data-bs-target="#productCarousel" data-bs-slide="prev" 
-        >
-  <span class="carousel-control-prev-icon" style="filter: invert(1);"></span>
-</button>
+    <div class="carousel-item">
+      <div class="row g-0 justify-content-center">
+        <div class="col-12 col-md-6 d-flex">
+          <img src="Images/pro-1.svg" class="img-fluid w-100" alt="pump 2">
+        </div>
+      </div>
+    </div>
 
-<button class="carousel-control-next" type="button" data-bs-target="#productCarousel" data-bs-slide="next" 
-        >
-  <span class="carousel-control-next-icon" style="filter: invert(1);"></span>
-</button>
+    <div class="carousel-item">
+      <div class="row g-0 justify-content-center">
+        <div class="col-12 col-md-6 d-flex">
+          <img src="Images/pro-1.svg" class="img-fluid w-100" alt="pump 3">
+        </div>
+      </div>
+    </div>
+
+    <div class="carousel-item">
+      <div class="row g-0 justify-content-center">
+        <div class="col-12 col-md-6 d-flex">
+          <img src="Images/pro-1.svg" class="img-fluid w-100" alt="pump 4">
+        </div>
+      </div>
+    </div>
+
+    <div class="carousel-item">
+      <div class="row g-0 justify-content-center">
+        <div class="col-12 col-md-6 d-flex">
+          <img src="Images/pro-1.svg" class="img-fluid w-100" alt="pump 5">
+        </div>
+      </div>
+    </div>
+
+    <div class="carousel-item">
+      <div class="row g-0 justify-content-center">
+        <div class="col-12 col-md-6 d-flex">
+          <img src="Images/pro-1.svg" class="img-fluid w-100" alt="pump 6">
+        </div>
+      </div>
+    </div>
 
   </div>
 
+  <!-- Controls -->
+  <button class="carousel-control-prev" type="button" data-bs-target="#productCarousel" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" style="filter: invert(1);"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+
+  <button class="carousel-control-next" type="button" data-bs-target="#productCarousel" data-bs-slide="next">
+    <span class="carousel-control-next-icon" style="filter: invert(1);"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+
   <!-- Grid for Tablet & Desktop -->
-  <div class="row d-none d-md-flex mt-4">
+  <div class="row d-none d-lg-flex mt-4">
     <div class="col-6 col-lg-4 mb-4">
       <img src="Images/pro-1.svg" class="img-fluid Product-image-automobile" alt="pump">
     </div>
@@ -504,6 +536,7 @@
     <script src="js/Progressbar.js"></script>
     <script src="js/Header.js"></script>
     <script src="js/sign-up.js"></script>
+    <script></script>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"

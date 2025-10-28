@@ -21,7 +21,7 @@
   left: 0;
   width: 0%;
   height: 5px;
-  background: linear-gradient(90deg, #f5791a, #b814bd);
+  background: linear-gradient(90deg, #FFD700, #f5791a);
   z-index: 9999;
   transition: width 0.2s ease-out;
 }
@@ -1041,6 +1041,13 @@ footer{
     padding: 3rem 0 5rem;
   }
 }
+
+ /* summary */
+  .error-summary{display:none;margin:0 0 16px;padding:12px 14px;border:1px solid #f3c2c2;background:#fff5f5;border-radius:10px}
+  .error-summary.show{display:block}
+  .error-summary b{color:#b21f2d}
+  .error-summary ul{margin:.5rem 0 0 1rem}
+  .error-summary a{color:#b21f2d;text-decoration:underline}
 
 .App-fs{
   font-size: 15px;

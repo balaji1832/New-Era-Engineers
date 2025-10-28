@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>SCREW PUMP</title>
+    <title>SERVICE</title>
     <link rel="icon" href="Images/Group.svg" />
     <link rel="stylesheet" href="style.css" />
     <link
@@ -27,6 +27,35 @@
       rel="stylesheet"
     />
   </head>
+  <style>
+  .success-modal {
+    position: fixed;
+    top: 50%;
+    left: 4%;
+    transform: translateY(-50%) translateX(-150%);
+    background: #10b981; /* green-500 */
+    color: #fff;
+    padding: 1.25rem 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    font-family: "Inter", sans-serif;
+    font-size: 1rem;
+    font-weight: 500;
+    opacity: 0;
+    transition: all 0.5s ease;
+    z-index: 9999;
+  }
+  .success-modal.show {
+    opacity: 1;
+    transform: translateY(-50%) translateX(0);
+  }
+  .success-modal::before {
+    content: "✔";
+    font-weight: bold;
+    margin-right: 10px;
+  }
+</style>
+
   <body>
     <!-- Scroll Progress Bar -->
     <div id="scroll-progress"></div>
@@ -86,7 +115,7 @@
                 <!-- PRODUCTS DROPDOWN -->
                 <li class="nav-item dropdown position-static">
                   <a
-                    class="nav-link ne-active dropdown-toggle d-flex align-items-center gap-1"
+                    class="nav-link  dropdown-toggle d-flex align-items-center gap-1"
                     href="#"
                     id="productsDropdown"
                     role="button"
@@ -215,7 +244,7 @@
                   <a class="nav-link" href="Enquiry.html">Enquiry</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="service.html">Service</a>
+                  <a class="nav-link ne-active" href="service.html">Service</a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="Contact-us.html">Contact Us</a>
@@ -255,273 +284,9 @@
       </div>
     </header>
 
-    <!-- Banner Section -->
-    <!-- Desktop Banner -->
-    <section class="banner-section d-none d-md-block animate-item">
-      <div class="container-fluid p-0">
-        <img
-          src="Images/web-banner-new-era.jpg"
-          alt="Banner Image"
-          class="img-fluid banner-img w-100"
-        />
-      </div>
-    </section>
+   
 
-    <!-- Mobile Banner -->
-    <section class="banner-section d-block d-md-none animate-item">
-      <div class="container p-0">
-        <img
-          src="Images/web-banner-mobile.jpg"
-          alt="Banner Image"
-          class="img-fluid banner-img w-100"
-        />
-      </div>
-    </section>
-
-    <!--  PUMP DESCRIPTION -->
-    <section class="mt-5 animate-item">
-      <div class="container">
-        <div class="row">
-          <div class="col-12 col-lg-6">
-            <h2 class="fw-semibold">
-             SCREW <br/>
-              PUMP DESCRIPTION
-            </h2>
-            <hr class="underline-products" />
-          </div>
-          <div class="col-12 col-lg-6">
-            <p>
-                Designed with air tight mechanical seal, safety valve and energy efficient motor, these screw pumps are useful for transportation of corrosive liquid or liquid with different viscosity level. The outward structure of these screw pumps is made of high strength stainless steel and cast iron.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Tab-Pane Content -->
-    <section class="product-section my-5 animate-item">
-      <div class="container">
-         <div class="col-md-6 text-start d-block d-md-none">
-            <img
-              src="Images/pumps-product.svg"
-              alt="Pump"
-              class="img-fluid pumps-product"
-            />
-          </div>
-        <!-- Centered Tabs -->
-        <ul
-          class="nav nav-tabs justify-content-center mb-4"
-          style="font-family: 'Raleway'; font-weight: 500"
-          id="productTab"
-          role="tablist"
-        >
-          <li class="nav-item" role="presentation">
-            <button
-              class="nav-link active"
-              id="spec-tab"
-              data-bs-toggle="tab"
-              data-bs-target="#spec"
-              type="button"
-              role="tab"
-              aria-controls="spec"
-              aria-selected="true"
-            >
-              SPECIFICATION
-            </button>
-          </li>
-          <li class="nav-item" role="presentation">
-            <button
-              class="nav-link"
-              id="features-tab"
-              data-bs-toggle="tab"
-              data-bs-target="#features"
-              type="button"
-              role="tab"
-              aria-controls="features"
-              aria-selected="false"
-            >
-              FEATURES
-            </button>
-          </li>
-          <li class="nav-item" role="presentation">
-            <button
-              class="nav-link"
-              id="applications-tab"
-              data-bs-toggle="tab"
-              data-bs-target="#applications"
-              type="button"
-              role="tab"
-              aria-controls="applications"
-              aria-selected="false"
-            >
-              APPLICATIONS
-            </button>
-          </li>
-          <li class="nav-item" role="presentation">
-            <button
-              class="nav-link"
-              id="moc-tab"
-              data-bs-toggle="tab"
-              data-bs-target="#moc"
-              type="button"
-              role="tab"
-              aria-controls="moc"
-              aria-selected="false"
-            >
-              M.O.C
-            </button>
-          </li>
-        </ul>
-
-        <!-- Tab Content + Image -->
-        <div class="row align-items-start mt-5">
-          <!-- left: Image -->
-          <div class="col-md-6 text-start">
-            <img
-              src="Images/pumps-product.svg"
-              alt="Pump"
-              class="img-fluid pumps-product d-none d-md-block"
-            />
-          </div>
-          <!-- right: Tab Content -->
-          <div class="col-md-6 mb-4 mb-lg-0">
-            <div class="tab-content p-4 text-start">
-              <div
-                class="tab-pane fade show active"
-                id="spec"
-                role="tabpanel"
-                aria-labelledby="spec-tab"
-              >
-                <div>
-                  <p>Maximum Flow Rate 200 M.Cu/Hr</p>
-                  <p>Maximum Discharge Head or Pressure 36 Bar</p>
-                  <p>Maximum Suction Lift Dry or Wet 8.6 mwc</p>
-                  <p>Maximum Solid Passage Micron Size soft</p>
-                  <p>Maximum Temperature</p>
-                </div>
-                <div>
-                  <div class="download-brochure my-4 text-start">
-                    <a
-                      href="https://neweraengineers.com/wp-content/uploads/2021/09/SCREW-PUMP.pdf"
-                      download
-                      class="btn btn-outline-primary d-inline-flex align-items-center"
-                    >
-                      <i class="bi bi-download me-2"></i> Download Brochure
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <div
-                class="tab-pane fade"
-                id="features"
-                role="tabpanel"
-                aria-labelledby="features-tab"
-              >
-                <div>
-                  <p>Can handle liquids containing soft solids and abrasive particles</p>
-                  <p>Capacity is propotional to speed</p>
-                  <p>Low Shear Rate</p>
-                  <p>Low, Medium & High Pressure Capabilities</p>
-                  <p>Minimal Damage to shear sensitive products</p>
-                  <p>Non Pulsating Metered Flow</p>
-                  <p>Reversible operation possible</p>
-                  <p>Self Primimg even with entrained air</p>
-                  <p>Volume Practically unaffected dur to viscosity changes</p>
-                </div>
-                <div>
-                  <div class="download-brochure my-4 text-start">
-                    <a
-                      href="https://neweraengineers.com/wp-content/uploads/2021/09/SCREW-PUMP.pdf"
-                      download
-                      class="btn btn-outline-primary d-inline-flex align-items-center"
-                    >
-                      <i class="bi bi-download me-2"></i> Download Brochure
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <div
-                class="tab-pane fade"
-                id="applications"
-                role="tabpanel"
-                aria-labelledby="applications-tab"
-              >
-                <div class="row App-fs">
-                  <div class="col-6">
-                    <p>Adhesive & Glue</p>
-                    <p>Beverages</p>
-                    <p>Breweries</p>
-                    <p>Chemical & Fertilizers</p>
-                    <p>Confectioneries</p>
-                    <p>Cosmetics & Toiletries</p>
-                    <p>Dairy</p>
-                    <p>Distilleries</p>
-                    <p>Edible oil</p>
-                    <p>Effluent Treatment Plant</p>
-                    <p>Electronics Industries</p>
-                    <p>ETP / STP</p>
-                    <p>Explosives</p>
-                    <p>Food Processing</p>
-                    <p>Laboratories</p>
-                  </div>
-                  <div class="col-6">
-                    <p>Marine & Ship building</p>
-                    <p>Mining & Construction</p>
-                    <p>Oil Blending</p>
-                    <p>Paint & Varnish</p>
-                    <p>Painting & Packaging Industries</p>
-                    <p>Palm oil</p>
-                    <p>Paper & Pul Industries</p>
-                    <p>	Petrochemical Industries</p>
-                    <p>Pharmaceuticals</p>
-                    <p>Power Plant</p>
-                    <p>	Soap & Detergent Industries</p>
-                    <p>Starch</p>
-                    <p>Steel Industries</p>
-                    <p>Sugar Industries</p>
-                    <p>Textiles Industries</p>
-                    <p>Viscose Industries</p>
-                  </div>
-                  
-                </div>
-                <div class="download-brochure my-4 text-start">
-                  <a
-                    href="https://neweraengineers.com/wp-content/uploads/2021/09/SCREW-PUMP.pdf"
-                    download
-                    class="btn btn-outline-primary d-inline-flex align-items-center"
-                  >
-                    <i class="bi bi-download me-2"></i> Download Brochure
-                  </a>
-                </div>
-              </div>
-              <div
-                class="tab-pane fade"
-                id="moc"
-                role="tabpanel"
-                aria-labelledby="moc-tab"
-              >
-                <div>
-                 <p>Cast Iron </p>
-                  <p>SS316</p>
-                  
-                </div>
-                <div>
-                  <div class="download-brochure my-4 text-start">
-                    <a
-                      href="https://neweraengineers.com/wp-content/uploads/2021/09/SCREW-PUMP.pdf"
-                      download
-                      class="btn btn-outline-primary d-inline-flex align-items-center"
-                    >
-                      <i class="bi bi-download me-2"></i> Download Brochure
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+    
 
     <!-- Have Any QUERIES? -->
     <section class="neeq-section animate-item">
@@ -535,100 +300,125 @@
               <span class="neeq-bold">HAVE</span> ANY<br />QUERIES?
             </h1>
             <p class="neeq-copy">
-              Our team is here to help. Reach out to us for product details,
-              technical support, or customized solutions — we’ll get back to you
-              quickly.
+              Our team of specialists are ready to assist you. Whether you need support with product selection, technical specifications, installation guidance, or customized pumping solutions, we’re just a message away.
             </p>
+            <p class="neeq-copy">
+                As one of India’s leading distributors of world-renowned pump brands, we ensure that every inquiry is handled with expertise, speed, and precision.
+            </p>
+            <p class="neeq-copy">
+                Reach out today, let’s help you find the right pump system for your application.
           </div>
 
           <!-- Right form -->
           <div class="col-lg-6">
-            <form class="neeq-form" action="#" method="post">
-              <div class="mb-3">
-                <label for="neeq-name" class="form-label">Name</label>
-                <input
-                  type="text"
-                  class="form-control"
-                  id="neeq-name"
-                  name="name"
-                  placeholder="Enter Your Name"
-                  required
-                />
-              </div>
+           <!-- Service Request Form -->
+<form class="neeq-form" id="serviceForm" action="#" method="post" novalidate>
+  <!-- Email -->
+  <div class="mb-3">
+    <label for="sr-email" class="form-label">Email <span aria-hidden="true">*</span></label>
+    <input type="email" class="form-control" id="sr-email" name="email"
+           placeholder="name@example.com" required maxlength="80" />
+    <small class="invalid-msg"></small>
+  </div>
 
-              <div class="mb-3">
-                <label for="neeq-phone" class="form-label">Phone Number</label>
-                <input
-                  type="tel"
-                  class="form-control"
-                  id="neeq-phone"
-                  name="phone"
-                  placeholder="Enter your Phone Number"
-                />
-              </div>
+  <!-- Company Name -->
+  <div class="mb-3">
+    <label for="sr-company" class="form-label">Company Name <span aria-hidden="true">*</span></label>
+    <input type="text" class="form-control" id="sr-company" name="company"
+           placeholder="Your company" required minlength="2" maxlength="80"
+           pattern="^[A-Za-z0-9&().,'\-\s]{2,80}$" />
+    <small class="invalid-msg"></small>
+  </div>
 
-              <div class="mb-3">
-                <label for="neeq-email" class="form-label">E-Mail</label>
-                <input
-                  type="email"
-                  class="form-control"
-                  id="neeq-email"
-                  name="email"
-                  placeholder="Enter your Mail"
-                  required
-                />
-              </div>
+  <!-- Contact Person Name -->
+  <div class="mb-3">
+    <label for="sr-contact" class="form-label">Contact Person Name <span aria-hidden="true">*</span></label>
+    <input type="text" class="form-control" id="sr-contact" name="contact_person"
+           placeholder="Full name" required minlength="2" maxlength="60"
+           pattern="^[A-Za-z.'\-\s]{2,60}$" />
+    <small class="invalid-msg"></small>
+  </div>
 
-              <div class="mb-3">
-                <label for="neeq-whatsapp" class="form-label"
-                  >What’s App Number</label
-                >
-                <input
-                  type="tel"
-                  class="form-control"
-                  id="neeq-whatsapp"
-                  name="whatsapp"
-                  placeholder="Enter your What’s App Number"
-                />
-              </div>
+  <!-- Phone -->
+  <div class="mb-3">
+    <label for="sr-phone" class="form-label">Phone <span aria-hidden="true">*</span></label>
+    <input type="tel" class="form-control" id="sr-phone" name="phone"
+           placeholder="+91 9876543210" required
+           inputmode="tel" maxlength="20"
+           pattern="^(\+?\d{1,3}[-\s]?)?\d{10}$" />
+    <small class="invalid-msg"></small>
+  </div>
 
-              <div class="mb-4">
-                <label for="neeq-company" class="form-label"
-                  >Company Name</label
-                >
-                <input
-                  type="text"
-                  class="form-control"
-                  id="neeq-company"
-                  name="company"
-                  placeholder="Enter your Company Name"
-                />
-              </div>
+  <!-- WhatsApp No. -->
+  <div class="mb-3">
+    <label for="sr-whatsapp" class="form-label">WhatsApp No. <span aria-hidden="true">*</span></label>
+    <input type="tel" class="form-control" id="sr-whatsapp" name="whatsapp"
+           placeholder="+91 9876543210" required
+           inputmode="tel" maxlength="20"
+           pattern="^(\+?\d{1,3}[-\s]?)?\d{10}$" />
+    <small class="invalid-msg"></small>
+  </div>
 
-              <button type="submit" class="btn neeq-btn">Submit</button>
-            </form>
+  <!-- Product Name -->
+  <div class="mb-3">
+    <label for="sr-product" class="form-label">Product Name <span aria-hidden="true">*</span></label>
+    <input type="text" class="form-control" id="sr-product" name="product_name"
+           placeholder="e.g., Chemical Process Pump" required minlength="2" maxlength="80" />
+    <small class="invalid-msg"></small>
+  </div>
+
+  <!-- Model Number -->
+  <div class="mb-3">
+    <label for="sr-model" class="form-label">Model Number <span aria-hidden="true">*</span></label>
+    <input type="text" class="form-control" id="sr-model" name="model_number"
+           placeholder="e.g., NEEQ-HCP-120" required maxlength="40"
+           pattern="^[A-Za-z0-9\-\/\s]{1,40}$" />
+    <small class="invalid-msg"></small>
+  </div>
+
+  <!-- Serial Number -->
+  <div class="mb-3">
+    <label for="sr-serial" class="form-label">Pump / Motor / Gearbox Serial No. <span aria-hidden="true">*</span></label>
+    <input type="text" class="form-control" id="sr-serial" name="serial_number"
+           placeholder="e.g., PMG/23-45892" required maxlength="40"
+           pattern="^[A-Za-z0-9\/\-\s]{3,40}$" />
+    <small class="invalid-msg"></small>
+  </div>
+
+  <!-- Tax Invoice Number -->
+  <div class="mb-3">
+    <label for="sr-invoice" class="form-label">Tax Invoice Number <span aria-hidden="true">*</span></label>
+    <input type="text" class="form-control" id="sr-invoice" name="invoice_number"
+           placeholder="e.g., INV-2025-000123" required maxlength="40"
+           pattern="^[A-Za-z0-9\/\-\s]{3,40}$" />
+    <small class="invalid-msg"></small>
+  </div>
+
+  <!-- Tax Invoice Date -->
+  <div class="mb-3">
+    <label for="sr-invoice-date" class="form-label">Tax Invoice Date <span aria-hidden="true">*</span></label>
+    <input type="date" class="form-control" id="sr-invoice-date" name="invoice_date" required />
+    <small class="hint">Use your browser’s date picker. (Shown as dd-mm-yyyy on submission UI.)</small>
+    <small class="invalid-msg"></small>
+  </div>
+
+  <!-- Complaint / Issue -->
+  <div class="mb-4">
+    <label for="sr-issue" class="form-label">Complaint / Issue <span aria-hidden="true">*</span></label>
+    <textarea class="form-control" id="sr-issue" name="issue"
+              placeholder="Describe the problem briefly (symptoms, when it started, error codes)"
+              required minlength="10" maxlength="500" rows="4"></textarea>
+    <small class="invalid-msg"></small>
+  </div>
+
+  <button type="submit" class="btn neeq-btn">Submit</button>
+</form>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Review Our Product -->
-    <section style="background-color: #cb6725; color: #fff; padding: 20px" class="animate-item">
-      <div class="container text-center">
-        <h2 class="fw-semibold mt-4 text-light text-start text-md-center">
-          Review Our Product
-        </h2>
-        <p class="mt-4 text-start text-md-center">
-          Share your experience and feedback to help us improve and serve you
-          better with reliable, high-performance solutions.
-        </p>
-        <a href="#"
-          ><button type="button" class="mt-3 mb-2 Review-btn text-center">
-            Submit
-          </button></a
-        >
-      </div>
-    </section>
+    
 
     <!-- Sign Up Now -->
     <section class="mt-5 animate-item">
@@ -822,15 +612,103 @@
       })();
     </script>
 
-    <!-- submit-form-script -->
-    <script>
-      // demo: prevent actual submit while you style
-      document.querySelector(".neeq-form")?.addEventListener("submit", (e) => {
-        e.preventDefault();
-        alert("Submitted!");
-      });
-    </script>
+    
 
+
+    <!-- service -form script -->
+
+<script>
+  (function () {
+    const form = document.getElementById('serviceForm');
+    const phoneLike = ['sr-phone', 'sr-whatsapp'];
+    const msgs = {
+      valueMissing: 'This field is required.',
+      typeMismatch: 'Please enter a valid value.',
+      patternMismatch: 'Please check the format.',
+      tooShort: 'Too short.',
+      tooLong: 'Too long.'
+    };
+
+    // --- validation events ---
+    Array.from(form.elements).forEach((el) => {
+      if (!el.matches('.form-control')) return;
+      el.addEventListener('input', () => validateField(el));
+      el.addEventListener('blur', () => validateField(el));
+    });
+
+    function validateField(el) {
+      const msgEl = el.parentElement.querySelector('.invalid-msg');
+      el.classList.remove('is-valid', 'is-invalid');
+      msgEl && (msgEl.textContent = '');
+      if (['text', 'email', 'tel'].includes(el.type)) el.value = el.value.trimStart();
+
+      if (!el.checkValidity()) {
+        el.classList.add('is-invalid');
+        const e = el.validity;
+        let m = msgs.valueMissing;
+        if (e.typeMismatch) m = msgs.typeMismatch;
+        if (e.patternMismatch) m = msgs.patternMismatch;
+        if (e.tooShort) m = msgs.tooShort;
+        if (e.tooLong) m = msgs.tooLong;
+        msgEl && (msgEl.textContent = m);
+        return false;
+      } else {
+        if (el.value.length) el.classList.add('is-valid');
+        return true;
+      }
+    }
+
+    // --- submit guard and modal trigger ---
+    form.addEventListener('submit', (e) => {
+      let ok = true;
+      Array.from(form.elements).forEach((el) => {
+        if (el.matches('.form-control')) ok = validateField(el) && ok;
+      });
+
+      const phone = document.getElementById('sr-phone').value.replace(/\D/g, '');
+      const wa = document.getElementById('sr-whatsapp').value.replace(/\D/g, '');
+      if (phone && wa && phone === wa) {
+        ok = false;
+        const waEl = document.getElementById('sr-whatsapp');
+        const msgEl = waEl.parentElement.querySelector('.invalid-msg');
+        waEl.classList.add('is-invalid');
+        msgEl.textContent = 'WhatsApp number should not be identical to Phone.';
+      }
+
+      if (!ok) {
+        e.preventDefault();
+        const firstInvalid = form.querySelector('.is-invalid');
+        firstInvalid && firstInvalid.focus();
+        return;
+      }
+
+      // if all good — prevent real submission for demo
+      e.preventDefault();
+      showSuccessModal();
+      form.reset();
+      Array.from(form.querySelectorAll('.is-valid')).forEach(el => el.classList.remove('is-valid'));
+    });
+
+    // clean phone-like input
+    phoneLike.forEach(id => {
+      const el = document.getElementById(id);
+      el.addEventListener('blur', () => el.value = el.value.replace(/\s+/g, ' ').trim());
+    });
+
+    // --- create & show success modal ---
+    function showSuccessModal() {
+      let modal = document.querySelector('.success-modal');
+      if (!modal) {
+        modal = document.createElement('div');
+        modal.className = 'success-modal';
+        modal.textContent = 'Form submitted successfully!';
+        document.body.appendChild(modal);
+      }
+      modal.classList.add('show');
+      setTimeout(() => modal.classList.remove('show'), 3000);
+    }
+  })();
+</script>
 
 
   </body>

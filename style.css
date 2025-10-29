@@ -221,7 +221,132 @@ p{
   }
 
 
+  /* ====== Looking For  ====== */
+  /* Heading */
+.lf-title { letter-spacing: .2px; }
+.lf-rule { height: 2px; width: 150px; background: #CA661B; }
+/* Centered deck */
+.lf-deck { row-gap: 1.5rem; }
+
+/* Each item keeps a fixed card width so they align neatly */
+.lf-item { width: 290px; }               /* desktop/tablet */
+@media (max-width: 575.98px) {
+  .lf-item { width: 100%; max-width: 320px; }   /* nice single column on phones */
+}
+
+/* Card */
+.lf-card { border-radius: 1rem; transition: transform .2s ease, box-shadow .2s ease; }
+.lf-card:hover { transform: translateY(-10px); box-shadow: -5px 7px 15px rgba(46,46,46,.3) !important; }
+
+/* Icon tile */
+.lf-icon { display:inline-flex; align-items:center; justify-content:center; width:56px; height:56px; border-radius:14px; }
+.lf-icon img { max-width:40px; max-height:40px; object-fit:contain; }
+
+/* Button (override Bootstrap) */
+.lf-btn.btn, .btn.lf-btn {
+  --lf-orange:#CA661B; --lf-orange-hover:#B15516;
+  background:var(--lf-orange) !important;
+  color:#fff !important; border-color:var(--lf-orange) !important;
+  border-radius:.6rem; padding:.55rem 1.1rem !important;
+}
+.lf-btn.btn:hover, .btn.lf-btn:hover {
+  background:var(--lf-orange-hover) !important;
+  border-color:var(--lf-orange-hover) !important;
+  color:#fff !important;
+}
+
+
   /* About us styling */
+ /* =======================
+     Vision/Mission (vm-*)
+     ======================= */
+  .vm-section { position: relative; }
+
+  .vm-title {
+    color: #000;             /* deep blue like in your ref */
+    font-weight: 600;
+    margin-bottom: .25rem;
+  }
+  .vm-underline {
+    width: 52px;
+    height: 3px;
+    background: #CA661B;
+  }
+
+  /* Quote wrapper: adds opening & closing quotes */
+  .vm-quote { position: relative; padding: 12px 0 4px; }
+  .vm-quote::before,
+  .vm-quote::after {
+    content: "“";
+    position: absolute;
+    color: #0b172b;
+    opacity: .15;
+    font-size: 48px;
+    line-height: 1;
+    font-weight: 700;
+    
+  }
+  .vm-quote::before {
+    left: -8px; top: -6px;
+    transform: translateY(-10%);
+  }
+  .vm-quote::after {
+    content: "”";
+    right: -8px; bottom: -18px;
+    transform: translateY(10%);
+  }
+
+  .vm-copy {
+    color: #0d0d0c;             /* slate-800 */
+    font-size: 0.98rem;
+    line-height: 1.7;
+    margin: 0;
+  }
+
+  /* Image tile with soft white card + shadow */
+  .vm-img {
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 20px 35px rgba(0,0,0,.08);
+    overflow: hidden;
+  }
+
+  /* Keep a pleasant height / aspect across screens */
+  .vm-img-fill {
+    width: 100%;
+    aspect-ratio: 16 / 10;      /* modern browsers */
+    background-size: cover;
+    background-position: center;
+  }
+
+  /* If you prefer an <img> tag, use this class */
+  .vm-img-tag {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+    aspect-ratio: 16 / 10;
+  }
+
+  /* Spacing helpers (since Bootstrap doesn't have 6 by default) */
+  .py-md-6 { padding-top: 5rem !important; padding-bottom: 5rem !important; }
+  .mb-md-6 { margin-bottom: 5rem !important; }
+
+  /* Responsive tweaks to mimic the reference */
+  @media (min-width: 992px) {
+    .vm-copy { font-size: 1.02rem; }
+    .vm-quote::before { font-size: 54px; left: -12px; top: -10px; }
+    .vm-quote::after  { font-size: 54px; right: -12px; bottom: -22px; }
+  }
+
+  @media (max-width: 575.98px) {
+    .vm-underline { width: 42px; height: 2px; }
+    .vm-quote::before { left: -4px; font-size: 40px; }
+    .vm-quote::after { right: -4px; font-size: 40px; }
+  }
+
+
+
 .stats-section {
       display: flex;
       justify-content: center;
